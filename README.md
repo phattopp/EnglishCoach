@@ -34,3 +34,5 @@ python3 -m http.server 8000
 
 ## Contact Form
 The contact buttons use `mailto:` links to keep the site purely static. For a functional form, integration with Formspree or Netlify Forms is recommended.
+
+<!-- Deployment test trigger -->
