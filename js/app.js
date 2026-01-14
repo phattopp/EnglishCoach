@@ -10,8 +10,8 @@ const translations = {
         nav_contact: "Contact",
 
         // Home / Hero
-        hero_title: "English Coach Website 2026",
-        hero_subtitle: "Business English, Technical English, English for Schools, English Summer Camps",
+        hero_title: "Professional English Coaching",
+        hero_subtitle: "Improve your Business English or join our Adventure Camps for Kids.",
 
         // About Us
         about_title: "About Us",
