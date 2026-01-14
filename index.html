@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The English Coach - Professional English Coaching</title>
+    <meta name="description" content="Professional English Coaching for Business, Management, and Adventure Camps for Kids in Austria.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                     <!-- Using the existing logo -->
+                    <a href="#"><img src="images/logo.png" alt="The English Coach"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" data-key="nav_home">Home</a></li>
+                    <li><a href="#services" data-key="nav_courses">Kurse</a></li>
+                    <li><a href="#about" data-key="nav_about">Über uns</a></li>
+                    <li><a href="#contact" data-key="nav_contact">Kontakt</a></li>
+                    <li class="lang-switch">
+                        <button class="lang-btn active" onclick="setLanguage('de')">DE</button>
+                        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 data-key="hero_title">Englisch Coaching für Profis</h1>
+            <p data-key="hero_subtitle">Verbessern Sie Ihr Business-Englisch oder erleben Sie Abenteuer in unseren Kids Camps.</p>
+            <a href="#contact" class="btn btn-primary" data-key="cta_start">Jetzt Starten</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="text-center" data-key="services_title">Unsere Kurse & Angebote</h2>
+            <div class="services-grid">
+                <!-- Service 1: Business English -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/img-md2.jpg" alt="Business English">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-key="service1_title">Business English</h3>
+                        <p data-key="service1_desc">Individuelles Coaching für Unternehmen und Führungskräfte. Perfektionieren Sie Ihre Verhandlungssicherheit.</p>
+                        <br>
+                        <a href="#contact" class="btn btn-primary" data-key="cta_more">Mehr Infos</a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Kids Camp -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <!-- Using kids camp image available -->
+                        <img src="images/img-md1.jpg" alt="Kids Camp">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-key="service2_title">English Adventure Camp</h3>
+                        <p data-key="service2_desc">5 Tage Action pur! Canyoning, Rafting und Englisch lernen für Kids im Mölltal.</p>
+                        <br>
+                        <a href="#contact" class="btn btn-primary" data-key="cta_more">Mehr Infos</a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Private Coaching -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/img-md3.jpg" alt="Private Coaching">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-key="service3_title">Privatunterricht</h3>
+                        <p data-key="service3_desc">Maßgeschneiderter Einzelunterricht für Ihren persönlichen Erfolg und schnelle Fortschritte.</p>
+                        <br>
+                        <a href="#contact" class="btn btn-primary" data-key="cta_more">Mehr Infos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 data-key="about_title">Über The English Coach</h2>
+                    <p data-key="about_text1">
+                        Wir sind spezialisiert auf personalisiertes Tele-Coaching, Face-to-Face-Training und Seminare. Unser Ziel ist es, Ihnen die Sicherheit zu geben, die Sie auf dem internationalen Parkett benötigen.
+                    </p>
+                    <br>
+                    <p data-key="about_text2">
+                        Unser Team besteht aus erfahrenen Native Speakern, die moderne Methoden mit jahrelanger Erfahrung kombinieren.
+                    </p>
+                    <br>
+                    <a href="#contact" class="btn btn-primary" data-key="cta_contact">Kontaktieren Sie uns</a>
+                </div>
+                <div class="about-img">
+                    <img src="images/team_michael.jpg" alt="Michael Topp - The English Coach">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding contact">
+        <div class="container">
+            <h2 class="text-center" data-key="contact_title">Kontaktieren Sie uns</h2>
+            <div class="contact-content">
+                <p data-key="contact_subtitle">Bereit für den nächsten Schritt? Wir freuen uns auf Ihre Nachricht.</p>
+                
+                <div class="contact-info">
+                    <p><strong>Michael Topp</strong></p>
+                    <p>Niederdorferstrasse 236, A-9020 Klagenfurt</p>
+                    <p>Tel: <a href="tel:+436766414143" style="text-decoration: underline;">+43 676 641 41 43</a></p>
+                    <p>Email: <a href="mailto:mike@the-english-coach.com" style="text-decoration: underline;">mike@the-english-coach.com</a></p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="mailto:mike@the-english-coach.com" class="btn btn-primary" style="background-color: var(--white); color: var(--secondary-color);" data-key="cta_email">Email Senden</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The English Coach. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
