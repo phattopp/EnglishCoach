@@ -92,7 +92,7 @@ const translations = {
         nav_contact: "Kontakt",
 
         // Home / Hero
-        hero_title: "English Coach Website 2026",
+        hero_title: "Englisch Coaching für Profis",
         hero_subtitle: "Verbessern Sie Ihr Business-Englisch oder erleben Sie Abenteuer in unseren Kids Camps.",
 
         // About Us
