@@ -93,7 +93,7 @@ const translations = {
 
         // Home / Hero
         hero_title: "English Coach Website 2026",
-        hero_subtitle: "Business English, Technical English, Englisch für Schulen, Englisch-Sommercamps",
+        hero_subtitle: "Verbessern Sie Ihr Business-Englisch oder erleben Sie Abenteuer in unseren Kids Camps.",
 
         // About Us
         about_title: "Über Uns",
