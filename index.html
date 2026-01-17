@@ -20,12 +20,13 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <!-- Using the existing logo -->
                     <a href="#"><img src="images/logo.png" alt="The English Coach"></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home" data-key="nav_home">Home</a></li>
-                    <li><a href="#services" data-key="nav_courses">Kurse</a></li>
+                    <li><a href="#coaching" data-key="nav_coaching">Coaching</a></li>
+                    <li><a href="#schools" data-key="nav_schools">Schulen</a></li>
+                    <li><a href="#camps" data-key="nav_camps">Camps</a></li>
                     <li><a href="#about" data-key="nav_about">Über uns</a></li>
                     <li><a href="#contact" data-key="nav_contact">Kontakt</a></li>
                     <li class="lang-switch">
@@ -47,80 +48,158 @@
         <div class="container">
             <h1 data-key="hero_title">Englisch Coaching für Profis</h1>
             <p data-key="hero_subtitle">Verbessern Sie Ihr Business-Englisch oder erleben Sie Abenteuer in unseren Kids
-                Camps.</p>
-            <a href="#contact" class="btn btn-primary" data-key="cta_start">Jetzt Starten</a>
+                Camps.
+            </p>
+            <a href="#coaching" class="btn btn-primary" data-key="nav_coaching">Start Now</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section-padding">
+    <!-- Coaching Section -->
+    <section id="coaching" class="section-padding">
         <div class="container">
-            <h2 class="text-center" data-key="services_title">Unsere Kurse & Angebote</h2>
+            <h2 class="text-center" data-key="coaching_title">Business & Technical English</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;" data-key="coaching_intro">Unsere
+                Business- und Technical-English-Programme...</p>
+
             <div class="services-grid">
-                <!-- Service 1: Business English -->
+                <!-- Basic English -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <img src="images/img-md2.jpg" alt="Business English">
-                    </div>
                     <div class="service-content">
-                        <h3 data-key="service1_title">Business English</h3>
-                        <p data-key="service1_desc">Individuelles Coaching für Unternehmen und Führungskräfte.
-                            Perfektionieren Sie Ihre Verhandlungssicherheit.</p>
-                        <br>
-                        <a href="#contact" class="btn btn-primary" data-key="cta_more">Mehr Infos</a>
+                        <h3 data-key="basic_coaching_title">Basic English Coaching</h3>
+                        <p data-key="basic_coaching_desc">Ideal für Mitarbeitende mit grundlegenden
+                            Englischkenntnissen...</p>
                     </div>
                 </div>
-
-                <!-- Service 2: Kids Camp -->
+                <!-- Business English -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <!-- Using kids camp image available -->
-                        <img src="images/img-md1.jpg" alt="Kids Camp">
-                    </div>
                     <div class="service-content">
-                        <h3 data-key="service2_title">English Adventure Camp</h3>
-                        <p data-key="service2_desc">5 Tage Action pur! Canyoning, Rafting und Englisch lernen für Kids
-                            im Mölltal.</p>
-                        <br>
-                        <a href="#contact" class="btn btn-primary" data-key="cta_more">Mehr Infos</a>
+                        <h3 data-key="business_coaching_title">Business English Coaching</h3>
+                        <p data-key="business_coaching_desc">Für Fachkräfte mit guten Englischkenntnissen...</p>
                     </div>
                 </div>
-
-                <!-- Service 3: Private Coaching -->
+                <!-- Technical English -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <img src="images/img-md3.jpg" alt="Private Coaching">
-                    </div>
                     <div class="service-content">
-                        <h3 data-key="service3_title">Privatunterricht</h3>
-                        <p data-key="service3_desc">Maßgeschneiderter Einzelunterricht für Ihren persönlichen Erfolg und
-                            schnelle Fortschritte.</p>
-                        <br>
-                        <a href="#contact" class="btn btn-primary" data-key="cta_more">Mehr Infos</a>
+                        <h3 data-key="technical_coaching_title">Technical English for Apprentices</h3>
+                        <p data-key="technical_coaching_desc">Entwickelt in enger Zusammenarbeit mit unseren Kunden...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <div class="services-grid" style="grid-template-columns: 1fr 1fr;">
+                    <!-- Private Tutoring -->
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3 data-key="private_tutoring_title">Private Einzel-Nachhilfe</h3>
+                            <p data-key="private_tutoring_intro" style="font-weight: bold; margin-bottom: 0.5rem;"></p>
+                            <p data-key="private_tutoring_desc1"></p>
+                            <p data-key="private_tutoring_desc2" style="margin-top: 0.5rem;"></p>
+                        </div>
+                    </div>
+                    <!-- Exam Prep -->
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3 data-key="exam_prep_title">Prüfungsvorbereitung</h3>
+                            <p data-key="exam_prep_desc">Wir bieten Unterstützung für Schüler...</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Schools Section -->
+    <section id="schools" class="section-padding" style="background-color: var(--light-bg);">
+        <div class="container">
+            <h2 class="text-center" data-key="schools_title">Englisch in Schulen</h2>
+            <p class="text-center" style="font-size: 1.2rem; margin-bottom: 2rem;" data-key="schools_subtitle">Intensive
+                English Programs</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p data-key="schools_intro"></p>
+                    <br>
+                    <p data-key="schools_desc"></p>
+                </div>
+                <div class="about-img">
+                    <img src="images/img-blog2.jpg" alt="Schools">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Camps Section -->
+    <section id="camps" class="section-padding">
+        <div class="container">
+            <h2 class="text-center" data-key="camps_title">Sommercamps</h2>
+
+            <!-- Mission -->
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                <h3 data-key="camps_mission_title">Unsere Mission</h3>
+                <p data-key="camps_mission_desc"></p>
+            </div>
+
+            <!-- Intro -->
+            <div class="about-grid" style="margin-bottom: 4rem;">
+                <div class="about-img">
+                    <img src="images/img-md1.jpg" alt="Adventure">
+                </div>
+                <div class="about-text">
+                    <h3 data-key="camps_adventure_intro_title">Neue Abenteuer erleben</h3>
+                    <p data-key="camps_adventure_intro_desc"></p>
+                </div>
+            </div>
+
+            <!-- Adventure Camp Details -->
+            <div class="service-card" style="padding: 2rem; margin-bottom: 2rem;">
+                <h3 data-key="adv_camp_title" style="color: var(--secondary-color);">Adventure Camp</h3>
+                <p data-key="adv_camp_desc1"></p>
+                <br>
+                <p data-key="adv_camp_desc2"></p>
+                <br>
+                <h4 data-key="friendship_title">Freundschaft & Teamwork</h4>
+                <p data-key="friendship_desc"></p>
+                <br>
+                <h4 data-key="agenda_title">Was steht auf dem Programm?</h4>
+                <p data-key="agenda_desc1"></p>
+                <p data-key="agenda_desc2"></p>
+                <p data-key="agenda_desc3"></p>
+            </div>
+
+            <!-- Lake Days Details -->
+            <div class="service-card" style="padding: 2rem; margin-bottom: 2rem;">
+                <h3 data-key="lake_camp_title" style="color: var(--accent-color);">Lake Days Camp</h3>
+                <p data-key="lake_camp_intro"></p>
+                <br>
+                <h4 data-key="activities_title">Aktivitäten</h4>
+                <p data-key="activities_desc"></p>
+                <br>
+                <h4 data-key="phone_title">Telefonfreie Woche</h4>
+                <p data-key="phone_desc"></p>
+            </div>
+
+            <!-- Team -->
+            <div style="margin-top: 3rem;">
+                <h3 data-key="team_title">Unser Kids Camp Team</h3>
+                <p data-key="team_desc1"></p>
+                <p data-key="team_desc2"></p>
+            </div>
+
+        </div>
+    </section>
+
     <!-- About Section -->
-    <section id="about" class="section-padding about">
+    <section id="about" class="section-padding about" style="background-color: var(--light-bg);">
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
-                    <h2 data-key="about_title">Über The English Coach</h2>
-                    <p data-key="about_text1">
-                        Wir sind spezialisiert auf personalisiertes Tele-Coaching, Face-to-Face-Training und Seminare.
-                        Unser Ziel ist es, Ihnen die Sicherheit zu geben, die Sie auf dem internationalen Parkett
-                        benötigen.
-                    </p>
+                    <h2 data-key="about_title">Über Uns</h2>
+                    <p data-key="about_text1"></p>
                     <br>
-                    <p data-key="about_text2">
-                        Unser Team besteht aus erfahrenen Native Speakern, die moderne Methoden mit jahrelanger
-                        Erfahrung kombinieren.
-                    </p>
+                    <p data-key="about_text2"></p>
                     <br>
-                    <a href="#contact" class="btn btn-primary" data-key="cta_contact">Kontaktieren Sie uns</a>
+                    <p data-key="about_text3"></p>
                 </div>
                 <div class="about-img">
                     <img src="images/team_michael.jpg" alt="Michael Topp - The English Coach">
@@ -156,7 +235,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 The English Coach. All Rights Reserved.</p>
+            <p>&copy; 2026 The English Coach. All Rights Reserved.</p>
         </div>
     </footer>
 
