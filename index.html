@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -45,18 +45,22 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Split Layout) -->
     <section id="home" class="hero">
         <div class="container">
-            <h1 data-key="hero_title">Englisch Coaching für Profis</h1>
-            <p data-key="hero_subtitle">Verbessern Sie Ihr Business-Englisch oder erleben Sie Abenteuer in unseren Kids
-                Camps.
-            </p>
-            <a href="#coaching" class="btn btn-primary" data-key="nav_coaching">Start Now</a>
+            <div class="hero-text">
+                <h1 data-key="hero_title">Englisch Coaching für Profis</h1>
+                <p data-key="hero_subtitle">Verbessern Sie Ihr Business-Englisch oder erleben Sie Abenteuer in unseren
+                    Kids Camps.</p>
+                <a href="#coaching" class="btn btn-primary" data-key="nav_coaching">Start Now</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="images/banner.jpg" alt="English Coach Banner">
+            </div>
         </div>
     </section>
 
-    <!-- Coaching Section -->
+    <!-- Coaching Section (Grid Layout) -->
     <section id="coaching" class="section-padding">
         <div class="container">
             <h2 class="text-center" data-key="coaching_title">Business & Technical English</h2>
@@ -66,63 +70,47 @@
             <div class="services-grid">
                 <!-- Basic English -->
                 <div class="service-card">
-                    <div class="service-content">
-                        <h3 data-key="basic_coaching_title">Basic English Coaching</h3>
-                        <p data-key="basic_coaching_desc">Ideal für Mitarbeitende mit grundlegenden
-                            Englischkenntnissen...</p>
-                    </div>
+                    <h3 data-key="basic_coaching_title">Basic English Coaching</h3>
+                    <p data-key="basic_coaching_desc">Ideal für Mitarbeitende mit grundlegenden Englischkenntnissen...
+                    </p>
                 </div>
                 <!-- Business English -->
                 <div class="service-card">
-                    <div class="service-content">
-                        <h3 data-key="business_coaching_title">Business English Coaching</h3>
-                        <p data-key="business_coaching_desc">Für Fachkräfte mit guten Englischkenntnissen...</p>
-                    </div>
+                    <h3 data-key="business_coaching_title">Business English Coaching</h3>
+                    <p data-key="business_coaching_desc">Für Fachkräfte mit guten Englischkenntnissen...</p>
                 </div>
                 <!-- Technical English -->
                 <div class="service-card">
-                    <div class="service-content">
-                        <h3 data-key="technical_coaching_title">Technical English for Apprentices</h3>
-                        <p data-key="technical_coaching_desc">Entwickelt in enger Zusammenarbeit mit unseren Kunden...
-                        </p>
-                    </div>
+                    <h3 data-key="technical_coaching_title">Technical English</h3>
+                    <p data-key="technical_coaching_desc">Entwickelt in enger Zusammenarbeit mit unseren Kunden...</p>
                 </div>
             </div>
 
-            <div style="margin-top: 4rem;">
-                <div class="services-grid" style="grid-template-columns: 1fr 1fr;">
-                    <!-- Private Tutoring -->
-                    <div class="service-card">
-                        <div class="service-content">
-                            <h3 data-key="private_tutoring_title">Private Einzel-Nachhilfe</h3>
-                            <p data-key="private_tutoring_intro" style="font-weight: bold; margin-bottom: 0.5rem;"></p>
-                            <p data-key="private_tutoring_desc1"></p>
-                            <p data-key="private_tutoring_desc2" style="margin-top: 0.5rem;"></p>
-                        </div>
-                    </div>
-                    <!-- Exam Prep -->
-                    <div class="service-card">
-                        <div class="service-content">
-                            <h3 data-key="exam_prep_title">Prüfungsvorbereitung</h3>
-                            <p data-key="exam_prep_desc">Wir bieten Unterstützung für Schüler...</p>
-                        </div>
-                    </div>
+            <div class="services-grid" style="grid-template-columns: 1fr 1fr; margin-top: 2rem;">
+                <!-- Private Tutoring -->
+                <div class="service-card">
+                    <h3 data-key="private_tutoring_title">Private Einzel-Nachhilfe</h3>
+                    <p data-key="private_tutoring_desc1"></p>
+                </div>
+                <!-- Exam Prep -->
+                <div class="service-card">
+                    <h3 data-key="exam_prep_title">Prüfungsvorbereitung</h3>
+                    <p data-key="exam_prep_desc">Wir bieten Unterstützung für Schüler...</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Schools Section -->
-    <section id="schools" class="section-padding" style="background-color: var(--light-bg);">
+    <!-- Schools Section (Feature Split) -->
+    <section id="schools" class="section-padding" style="background-color: var(--off-white);">
         <div class="container">
             <h2 class="text-center" data-key="schools_title">Englisch in Schulen</h2>
-            <p class="text-center" style="font-size: 1.2rem; margin-bottom: 2rem;" data-key="schools_subtitle">Intensive
+            <p class="text-center" style="font-size: 1.2rem; margin-bottom: 3rem;" data-key="schools_subtitle">Intensive
                 English Programs</p>
             <div class="about-grid">
                 <div class="about-text">
                     <p data-key="schools_intro"></p>
-                    <br>
-                    <p data-key="schools_desc"></p>
+                    <p data-key="schools_desc" style="margin-top: 1rem;"></p>
                 </div>
                 <div class="about-img">
                     <img src="images/img-blog2.jpg" alt="Schools">
@@ -142,7 +130,7 @@
                 <p data-key="camps_mission_desc"></p>
             </div>
 
-            <!-- Intro -->
+            <!-- Intro Feature -->
             <div class="about-grid" style="margin-bottom: 4rem;">
                 <div class="about-img">
                     <img src="images/img-md1.jpg" alt="Adventure">
@@ -153,64 +141,46 @@
                 </div>
             </div>
 
-            <!-- Adventure Camp Details -->
-            <div class="service-card" style="padding: 2rem; margin-bottom: 2rem;">
-                <h3 data-key="adv_camp_title" style="color: var(--secondary-color);">Adventure Camp</h3>
-                <p data-key="adv_camp_desc1"></p>
-                <br>
-                <p data-key="adv_camp_desc2"></p>
-                <br>
-                <h4 data-key="friendship_title">Freundschaft & Teamwork</h4>
-                <p data-key="friendship_desc"></p>
-                <br>
-                <h4 data-key="agenda_title">Was steht auf dem Programm?</h4>
-                <p data-key="agenda_desc1"></p>
-                <p data-key="agenda_desc2"></p>
-                <p data-key="agenda_desc3"></p>
+            <!-- Details Cards -->
+            <div class="services-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="service-card">
+                    <h3 data-key="adv_camp_title" style="color: var(--black);">Adventure Camp</h3>
+                    <p data-key="adv_camp_desc1"></p>
+                    <p data-key="adv_camp_desc2" style="margin-top: 1rem;"></p>
+                </div>
+                <div class="service-card">
+                    <h3 data-key="lake_camp_title" style="color: var(--black);">Lake Days Camp</h3>
+                    <p data-key="lake_camp_intro"></p>
+                    <h4 data-key="activities_title" style="margin-top: 1rem;">Aktivitäten</h4>
+                    <p data-key="activities_desc"></p>
+                </div>
             </div>
-
-            <!-- Lake Days Details -->
-            <div class="service-card" style="padding: 2rem; margin-bottom: 2rem;">
-                <h3 data-key="lake_camp_title" style="color: var(--accent-color);">Lake Days Camp</h3>
-                <p data-key="lake_camp_intro"></p>
-                <br>
-                <h4 data-key="activities_title">Aktivitäten</h4>
-                <p data-key="activities_desc"></p>
-                <br>
-                <h4 data-key="phone_title">Telefonfreie Woche</h4>
-                <p data-key="phone_desc"></p>
-            </div>
-
-            <!-- Team -->
-            <div style="margin-top: 3rem;">
-                <h3 data-key="team_title">Unser Kids Camp Team</h3>
-                <p data-key="team_desc1"></p>
-                <p data-key="team_desc2"></p>
-            </div>
-
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding about" style="background-color: var(--light-bg);">
+    <!-- About Section (Team) -->
+    <section id="about" class="section-padding contact-modern"
+        style="background-color: var(--off-white); padding-bottom: 0;">
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
                     <h2 data-key="about_title">Über Uns</h2>
                     <p data-key="about_text1"></p>
-                    <br>
-                    <p data-key="about_text2"></p>
-                    <br>
-                    <p data-key="about_text3"></p>
+                    <p data-key="about_text2" style="margin-top: 1rem;"></p>
+                    <p data-key="about_text3" style="margin-top: 1rem;"></p>
                 </div>
                 <div class="about-img">
-                    <img src="images/team_michael.jpg" alt="Michael Topp - The English Coach">
+                    <img src="images/team_michael.jpg" alt="Michael Topp">
                 </div>
+            </div>
+            <div style="margin-top: 3rem; text-align: center;">
+                <h3 data-key="team_title">Unser Kids Camp Team</h3>
+                <p data-key="team_desc1" style="max-width: 800px; margin: 0 auto;"></p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section (Modern) -->
     <section id="contact" class="section-padding contact-modern">
         <div class="container">
             <div class="contact-wrap">
@@ -241,7 +211,8 @@
                         <p data-key="error_message">Oops! Something went wrong. Please try again.</p>
                     </div>
                 </div>
-                <div class="contact-info" style="margin-top: 4rem;">
+
+                <div class="contact-info" style="margin-top: 4rem; text-align: center;">
                     <p><strong>Michael Topp</strong></p>
                     <p>Fischlstrasse 16, A-9020 Klagenfurt</p>
                     <p>Tel: <a href="tel:+436766414143" style="text-decoration: underline;">+43 676 641 41 43</a></p>
