@@ -448,3 +448,84 @@ footer {
     background-color: #e5e5e5;
     border-color: #e5e5e5;
 }
+
+/* Hero Section (Edway Style - Full Background) */
+.hero {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover; 
+    background-position: center top; 
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    margin-top: -85px; /* Pull behind nav */
+}
+
+/* Dark overlay for text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    display: block; /* No grid, stack content */
+    max-width: var(--container-width);
+}
+
+.hero-text {
+    max-width: 800px; /* Limit width */
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 24px;
+}
+
+/* Remove old Hero Image Wrapper styles if conflicting */
+.hero-image-wrapper {
+    display: none; /* Hide old hero image div */
+}
+
+/* Nav Adjustment for Overlay */
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* About Section Image Update */
+.about-img img {
+    border-radius: var(--radius-image);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 992px) {
+    .hero {
+        margin-top: 0;
+        min-height: 500px;
+        background-position: center;
+        padding-top: 40px;
+    }
+    .hero h1 { font-size: 42px; }
+}
