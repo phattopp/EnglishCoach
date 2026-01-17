@@ -139,10 +139,16 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(17, 17, 17, 0.95);
+    /* Dark background */
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 16px 0;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(17, 17, 17, 0.98);
 }
 
 nav {
@@ -170,12 +176,15 @@ nav {
     border-radius: var(--radius-pill);
     font-size: 15px;
     font-weight: 500;
-    color: var(--black);
+    color: var(--white);
+    /* White text */
+    background-color: transparent;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    background-color: var(--off-white);
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--white);
 }
 
 /* Language Switcher */
@@ -194,10 +203,15 @@ nav {
     font-family: var(--font-body);
     padding: 8px 12px;
     border-radius: var(--radius-pill);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .lang-btn.active {
-    background-color: var(--black);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.lang-btn:hover {
     color: var(--white);
 }
 
@@ -212,7 +226,8 @@ nav {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: var(--black);
+    background-color: var(--white);
+    /* White bars */
     transition: var(--transition);
 }
 
@@ -367,6 +382,7 @@ footer {
     /* Mobile Nav */
     .hamburger {
         display: block;
+        z-index: 1001;
     }
 
     .nav-links {
@@ -375,11 +391,13 @@ footer {
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: var(--white);
+        background-color: var(--black);
+        /* Dark mobile menu */
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        padding-bottom: 20px;
     }
 
     .nav-links.active {
@@ -389,14 +407,24 @@ footer {
     .nav-links li {
         margin: 16px 0;
     }
+
+    .nav-links li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
+
 /* Dark Mode Utilities (Edway Alternating Style) */
 .bg-black {
     background-color: var(--black);
     color: var(--white);
 }
 
-.bg-black h1, .bg-black h2, .bg-black h3, .bg-black h4, .bg-black .contact-heading, .bg-black .field-label {
+.bg-black h1,
+.bg-black h2,
+.bg-black h3,
+.bg-black h4,
+.bg-black .contact-heading,
+.bg-black .field-label {
     color: var(--white);
 }
 
@@ -455,13 +483,14 @@ footer {
     padding-top: 200px;
     padding-bottom: 100px;
     background-image: url('../images/hero-bg.jpg');
-    background-size: cover; 
-    background-position: center top; 
+    background-size: cover;
+    background-position: center top;
     min-height: 85vh;
     display: flex;
     align-items: center;
     color: var(--white);
-    margin-top: -85px; /* Pull behind nav */
+    margin-top: -85px;
+    /* Pull behind nav */
 }
 
 /* Dark overlay for text readability */
@@ -472,19 +501,21 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
     z-index: 1;
 }
 
 .hero .container {
     position: relative;
     z-index: 2;
-    display: block; /* No grid, stack content */
+    display: block;
+    /* No grid, stack content */
     max-width: var(--container-width);
 }
 
 .hero-text {
-    max-width: 800px; /* Limit width */
+    max-width: 800px;
+    /* Limit width */
 }
 
 .hero h1 {
@@ -500,20 +531,17 @@ footer {
 
 /* Remove old Hero Image Wrapper styles if conflicting */
 .hero-image-wrapper {
-    display: none; /* Hide old hero image div */
+    display: none;
+    /* Hide old hero image div */
 }
 
-/* Nav Adjustment for Overlay */
-header {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
+/* Nav Adjustment for Overlay - Override for conflict avoidance logic */
+/* Handled in main header block now */
 
 /* About Section Image Update */
 .about-img img {
     border-radius: var(--radius-image);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -527,5 +555,8 @@ header {
         background-position: center;
         padding-top: 40px;
     }
-    .hero h1 { font-size: 42px; }
+
+    .hero h1 {
+        font-size: 42px;
+    }
 }
