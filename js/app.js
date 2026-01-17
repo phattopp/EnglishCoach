@@ -79,9 +79,15 @@ const translations = {
         team_desc1: "Our team brings extensive experience from schools across Klagenfurt and Villach, including the EU Gymnasium, Slovenian Gymnasium, Körner-Schule, Lerchenfeld Volkschule, and Spittalberg Volkschule, among others. Some team members also have experience teaching at the University of Klagenfurt and the Fachhochschule Kärnten, as well as at other English summer camps for children in Austria.",
         team_desc2: "We are more than a group of educators—we are teachers, coaches, consultants, friends, and role models. Together, we create a supportive, inspiring environment where children can learn, grow, and feel confident.",
 
-        contact_title: "Contact Us",
+        contact_title: "Questions? We’re here to help.",
         contact_subtitle: "Ready for the next step? We look forward to your message.",
-        cta_email: "Send Email"
+        label_name: "Name",
+        label_email: "Email Address",
+        label_message: "Message",
+        cta_send: "Send Message",
+        success_title: "Thank you!",
+        success_message: "Your message has been received.",
+        error_message: "Oops! Something went wrong. Please try again."
     },
     de: {
         nav_home: "Home",
@@ -161,9 +167,15 @@ const translations = {
         team_desc1: "Unser Team bringt umfangreiche Erfahrung aus Schulen in Klagenfurt und Villach, darunter das EU-Gymnasium, Slowenisches Gymnasium, Körner-Schule, Lerchenfeld Volkschule und Spittalberg Volkschule. Einige Teammitglieder haben auch an der Universität Klagenfurt und der Fachhochschule Kärnten sowie an anderen Englisch-Sommercamps in Österreich gearbeitet.",
         team_desc2: "Wir sind mehr als ein Team von Lehrkräften – wir sind Lehrer, Coaches, Berater, Freunde und Vorbilder. Gemeinsam schaffen wir eine unterstützende, inspirierende Umgebung, in der Kinder lernen, wachsen und Selbstvertrauen gewinnen können.",
 
-        contact_title: "Kontaktieren Sie uns",
+        contact_title: "Fragen? Wir sind für Sie da.",
         contact_subtitle: "Bereit für den nächsten Schritt? Wir freuen uns auf Ihre Nachricht.",
-        cta_email: "Email Senden"
+        label_name: "Name",
+        label_email: "Email Adresse",
+        label_message: "Nachricht",
+        cta_send: "Nachricht Senden",
+        success_title: "Vielen Dank!",
+        success_message: "Ihre Nachricht wurde empfangen.",
+        error_message: "Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
     }
 };
 
@@ -216,4 +228,38 @@ links.forEach(link => {
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('lang') || 'de';
     setLanguage(savedLang);
+
+    // Form Handling
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            submitBtn.disabled = true;
+            submitBtn.innerText = translations[document.documentElement.lang].id === 'de' ? 'Senden...' : 'Sending...';
+
+            try {
+                // In a real scenario, this would POST to /api/submit
+                // For now, we simulate a delay and success
+                // await fetch('/api/submit', { method: 'POST', body: JSON.stringify(data) });
+
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network request
+
+                // Show success
+                form.style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+                document.querySelector('.contact-heading').style.display = 'none';
+
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('form-error').style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalText;
+            }
+        });
+    }
 });

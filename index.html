@@ -9,7 +9,9 @@
         content="Professional English Coaching for Business, Management, and Adventure Camps for Kids in Austria.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -209,24 +211,42 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding contact">
+    <section id="contact" class="section-padding contact-modern">
         <div class="container">
-            <h2 class="text-center" data-key="contact_title">Kontaktieren Sie uns</h2>
-            <div class="contact-content">
-                <p data-key="contact_subtitle">Bereit für den nächsten Schritt? Wir freuen uns auf Ihre Nachricht.</p>
-
-                <div class="contact-info">
+            <div class="contact-wrap">
+                <h2 class="contact-heading" data-key="contact_title">Questions? We’re here to help.</h2>
+                <div class="contact-form-container">
+                    <form id="contact-form" action="/api/submit" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="field-label" data-key="label_name">Name</label>
+                            <input type="text" class="text-field" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="field-label" data-key="label_email">Email Address</label>
+                            <input type="email" class="text-field" id="email" name="email"
+                                placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="field-label" data-key="label_message">Message</label>
+                            <textarea class="text-field textarea" id="message" name="message"
+                                placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button" data-key="cta_send">Send Message</button>
+                    </form>
+                    <div id="form-success" style="display:none;" class="form-message success">
+                        <h3 data-key="success_title">Thank you!</h3>
+                        <p data-key="success_message">Your message has been received.</p>
+                    </div>
+                    <div id="form-error" style="display:none;" class="form-message error">
+                        <p data-key="error_message">Oops! Something went wrong. Please try again.</p>
+                    </div>
+                </div>
+                <div class="contact-info" style="margin-top: 4rem;">
                     <p><strong>Michael Topp</strong></p>
                     <p>Fischlstrasse 16, A-9020 Klagenfurt</p>
                     <p>Tel: <a href="tel:+436766414143" style="text-decoration: underline;">+43 676 641 41 43</a></p>
                     <p>Email: <a href="mailto:mike@the-english-coach.com"
                             style="text-decoration: underline;">mike@the-english-coach.com</a></p>
-                </div>
-
-                <div style="margin-top: 2rem;">
-                    <a href="mailto:mike@the-english-coach.com" class="btn btn-primary"
-                        style="background-color: var(--white); color: var(--secondary-color);"
-                        data-key="cta_email">Email Senden</a>
                 </div>
             </div>
         </div>
