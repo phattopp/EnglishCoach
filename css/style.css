@@ -328,10 +328,23 @@ nav {
     margin: 0 auto;
 }
 
+
 .contact-heading {
     font-family: var(--font-heading);
     font-size: 48px;
     margin-bottom: 48px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.field-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-family: var(--font-heading);
 }
 
 .text-field {
@@ -341,6 +354,15 @@ nav {
     padding: 0 24px;
     border: 0;
     font-family: var(--font-body);
+    width: 100%;
+    color: var(--black);
+    font-size: 16px;
+}
+
+.text-field.textarea {
+    height: 150px;
+    padding-top: 20px;
+    resize: vertical;
 }
 
 .submit-button {
@@ -348,6 +370,12 @@ nav {
     height: 62px;
     background: var(--black);
     color: var(--white);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
 }
 
 /* Footer */
