@@ -317,6 +317,10 @@ nav {
     gap: 24px;
 }
 
+.services-grid.grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
 /* Contact Modern (Already implemented, ensuring compatibility) */
 .contact-modern {
     background-color: var(--white);
@@ -394,7 +398,8 @@ footer {
 
     .hero .container,
     .about-grid,
-    .services-grid {
+    .services-grid,
+    .services-grid.grid-2 {
         grid-template-columns: 1fr;
         gap: 40px;
     }
