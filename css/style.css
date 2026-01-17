@@ -390,3 +390,61 @@ footer {
         margin: 16px 0;
     }
 }
+/* Dark Mode Utilities (Edway Alternating Style) */
+.bg-black {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.bg-black h1, .bg-black h2, .bg-black h3, .bg-black h4, .bg-black .contact-heading, .bg-black .field-label {
+    color: var(--white);
+}
+
+.bg-black p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Invert cards in dark sections */
+.bg-black .service-card {
+    background-color: #1a1a1a;
+    color: var(--white);
+}
+
+.bg-black .service-card h3 {
+    color: var(--white);
+}
+
+.bg-black .service-card p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Invert buttons in dark sections */
+.bg-black .btn-primary {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.bg-black .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contact Modern Dark Inputs */
+.bg-black .text-field {
+    background-color: #333;
+    color: var(--white);
+}
+
+.bg-black .text-field::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-black .submit-button {
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid var(--white);
+}
+
+.bg-black .submit-button:hover {
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+}
