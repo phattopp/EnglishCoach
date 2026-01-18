@@ -35,4 +35,12 @@ python3 -m http.server 8000
 ## Contact Form
 The contact buttons use `mailto:` links to keep the site purely static. For a functional form, integration with Formspree or Netlify Forms is recommended.
 
-<!-- Deployment test trigger -->
+
+please use website update word doc to change text on this website
+background-color soft navy blue
+change body background-color: soft navy blue
+css
+body {
+    soft navy blue
+
+    

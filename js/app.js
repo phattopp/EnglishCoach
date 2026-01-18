@@ -54,8 +54,8 @@ const translations = {
         camps_adventure_intro_title: "Try New Adventures & Learn English",
         camps_adventure_intro_desc: "We offer both day camps and 5-day / 5-night camps in the Mölltal in Carinthia, giving families flexible options. At our camps, children are encouraged to try new activities, build confidence, and discover what they’re good at. They take part in fun outdoor games and sports—many for the very first time. English learning is part of everything we do. Through a mix of short classroom sessions and lots of outdoor activities, children practice speaking, build vocabulary, and improve their grammar. By using English naturally throughout the day, they become more confident, fluent, and comfortable with the language.",
 
-        adv_camp_title: "The Adventure Camp (5-days / 5-nights)",
-        adv_camp_desc1: "Every camp feels like a real adventure, children stay in comfortable accommodation with others of the same age, with boys and girls staying in separate huts. Our goal is to help children feel relaxed, supported, and free to be themselves—because that’s when learning happens best.",
+        adv_camp_title: "Adventure Camp (5-days / 5-nights)",
+        adv_camp_desc1: "Every camp feels like a real adventure. Children stay in comfortable accommodation with others of the same age, with boys and girls staying in separate huts. Our goal is to help children feel relaxed, supported, and free to be themselves—because that’s when learning happens best.",
         adv_camp_desc2: "Kids are encouraged to try new activities, take healthy risks, and discover their strengths. From water sports to games and challenges, every day inspires confidence, teamwork, and a spirit of adventure.",
 
         friendship_title: "Friendship & Teamwork",
@@ -132,7 +132,7 @@ const translations = {
         schools_title: "Englisch in Schulen",
         schools_subtitle: "Intensive Englisch-Programme an Ihrer Schule",
         schools_intro: "Wir bieten eine Vielzahl von Englisch-Programmen und Nachhilfeangeboten, um Schulen, Lehrkräfte und Schüler aller Niveaus zu unterstützen. Unser flexibles Konzept ermöglicht es uns, den Unterricht individuell an die Bedürfnisse jeder Klasse oder jedes einzelnen Schülers anzupassen.",
-        schools_desc: "Diese Intensiv-Englischwochen mit muttersprachlichen Lehrkräften helfen Kindern, ihre bestehenden Sprachkenntnisse auszubauen und ihre Sicherheitsgefühl und Kompetenz in der englischen Sprache zu stärken. Unsere Programme werden direkt mit den Schulen organisiert und finden vor Ort während der regulären Schulzeiten statt, sodass Englischlernen problemlos in den Schulalltag integriert werden kann. Darüber hinaus arbeiten wir mit Schulen zusammen, um die Vorbereitung auf das Cambridge First Certificate anzubieten und sicherzustellen, dass die Schüler bestmöglich unterstützt werden, um ihre Ziele zu erreichen.",
+        schools_desc: "Diese Intensiv-Englischwochen mit muttersprachlichen Lehrkräften helfen Kindern, ihre bestehenden Sprachkenntnisse auszubauen und ihr Sicherheitsgefühl und ihre Kompetenz in der englischen Sprache zu stärken. Unsere Programme werden direkt mit den Schulen organisiert und finden vor Ort während der regulären Schulzeiten statt, sodass Englischlernen problemlos in den Schulalltag integriert werden kann. Darüber hinaus arbeiten wir mit Schulen zusammen, um die Vorbereitung auf das Cambridge First Certificate anzubieten und sicherzustellen, dass die Schüler bestmöglich unterstützt werden, um ihre Ziele zu erreichen.",
 
         // Camps
         camps_title: "Sommercamps",
@@ -155,7 +155,7 @@ const translations = {
         agenda_desc3: "Die Kinder werden durchgehend von unserem professionellen, muttersprachlichen Team betreut, das von Michael Topp geleitet wird, der seit über 20 Jahren Sommercamps in Österreich organisiert.",
 
         lake_camp_title: "Lake Days Camp",
-        lake_camp_intro: "Im Lake Days Camp lernen Kinder draußen, erkunden die Natur und haben viel Spaß! Unsere SUP-Touren auf dem Seesind eine sichere und spannende Möglichkeit für Abenteuer. Alle Kinder tragen Schwimmwesten und unser Personal ist in Wasserrettung ausgebildet, um maximale Sicherheit zu gewährleisten. Die Campgröße ist klein, mit maximal 15 Kindern pro Woche, für ein persönliches und intensives Erlebnis.",
+        lake_camp_intro: "Im Lake Days Camp lernen Kinder draußen, erkunden die Natur und haben viel Spaß! Unsere SUP-Touren auf dem See sind eine sichere und spannende Möglichkeit für Abenteuer. Alle Kinder tragen Schwimmwesten und unser Personal ist in Wasserrettung ausgebildet, um maximale Sicherheit zu gewährleisten. Die Campgröße ist klein, mit maximal 15 Kindern pro Woche, für ein persönliches und intensives Erlebnis.",
 
         activities_title: "Aktivitäten & Wetteralternativen",
         activities_desc: "Morgens gibt es Yoga, Stretching, SUP-Touren oder Englischspiele, gefolgt von einer längeren SUP-Tour vor dem Mittagessen (inklusive). Nachmittags stehen Tischtennis, Wasseraktivitäten und eventuell Grundlagen der Wasserrettung auf dem Programm. Bei schlechtem Wetter bieten wir Wanderungen im Wald, Schatzsuchen oder Indoor-Spiele an.",
