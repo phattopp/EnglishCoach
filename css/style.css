@@ -526,20 +526,47 @@ footer {
 .hero {
     position: relative;
     padding-top: 200px;
+    /* Slider Setup */
+    position: relative;
+    padding-top: 200px;
     padding-bottom: 100px;
-    background-image: url('../images/banner.jpg');
-    background-size: cover;
-    background-position: center top;
     min-height: 85vh;
     display: flex;
     align-items: center;
     color: var(--white);
     margin-top: -85px;
-    /* Pull behind nav */
+    background-color: transparent;
+    /* Remove static background */
 }
 
-/* Dark overlay for text readability */
-.hero::before {
+/* Slider Container */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Dark overlay for text readability (applied to slider or individual slides) */
+.hero-slider::after {
     content: '';
     position: absolute;
     top: 0;
@@ -553,8 +580,10 @@ footer {
 .hero .container {
     position: relative;
     z-index: 2;
+    /* Ensure text is above slider */
+    width: 100%;
     display: block;
-    /* No grid, stack content */
+    /* Restore block for text */
     max-width: var(--container-width);
 }
 
