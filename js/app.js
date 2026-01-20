@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.hero-slider .slide');
     if (slides.length > 0) {
         let currentSlide = 0;
-        const slideInterval = 5000; // Change every 5 seconds
+        const slideInterval = 2000; // Change every 2 seconds
 
         function nextSlide() {
             slides[currentSlide].classList.remove('active');
