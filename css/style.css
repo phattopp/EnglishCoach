@@ -88,6 +88,13 @@ img {
     height: auto;
     display: block;
     border-radius: var(--radius-image);
+    transition: transform 0.4s ease;
+    /* Smooth motion */
+}
+
+img:hover {
+    transform: scale(1.03);
+    /* Subtle zoom effect */
 }
 
 .container {
