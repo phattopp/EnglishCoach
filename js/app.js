@@ -72,6 +72,14 @@ const translations = {
         activities_title: "Activities & Back-Up Weather Plans",
         activities_desc: "Morning sessions may include yoga, stretching, SUP tours, or English games, followed by a longer SUP tour before lunch which is included in the price. Afternoons feature table tennis, water fun, and possibley some basic water rescue practice. If we have bad weather, alternative options are hikes in the surrounding woods, treasure hunts, or indoor board/card games.",
 
+        // Camp Dates & Sign Up
+        camp_dates_title: "Dates & Prices",
+        adv_camp_dates: "July 26 - 31",
+        lake_camp_week1: "Week 1: July 13 - 17",
+        lake_camp_week2: "Week 2: July 20 - 24",
+        lake_camp_week3: "Week 3: August 10 - 14",
+        sign_up_btn: "Sign Up Now",
+
         phone_title: "Phone-Free Fun",
         phone_desc: "We encourage children to leave their phones at home to fully enjoy the camp experience. Phones can be brought if necessary, but use will be limited and children may be asked to put them away if they are using them too much.",
 
@@ -159,6 +167,14 @@ const translations = {
 
         activities_title: "Aktivitäten & Wetteralternativen",
         activities_desc: "Morgens gibt es Yoga, Stretching, SUP-Touren oder Englischspiele, gefolgt von einer längeren SUP-Tour vor dem Mittagessen (inklusive). Nachmittags stehen Tischtennis, Wasseraktivitäten und eventuell Grundlagen der Wasserrettung auf dem Programm. Bei schlechtem Wetter bieten wir Wanderungen im Wald, Schatzsuchen oder Indoor-Spiele an.",
+
+        // Camp Dates & Sign Up
+        camp_dates_title: "Termine & Preise",
+        adv_camp_dates: "26. - 31. Juli",
+        lake_camp_week1: "Woche 1: 13. - 17. Juli",
+        lake_camp_week2: "Woche 2: 20. - 24. Juli",
+        lake_camp_week3: "Woche 3: 10. - 14. August",
+        sign_up_btn: "Jetzt Anmelden",
 
         phone_title: "Telefonfreie Woche",
         phone_desc: "Wir empfehlen, dass Kinder ihre Handys zu Hause lassen, um das Camp voll zu genießen. Handys dürfen mitgebracht werden, die Nutzung wird jedoch begrenzt und bei zu häufiger Nutzung aufgefordert, diese wegzulegen.",
