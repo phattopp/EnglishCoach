@@ -54,7 +54,7 @@ const translations = {
         camps_adventure_intro_title: "Try New Adventures & Learn English",
         camps_adventure_intro_desc: "We offer both day camps and 5-day / 5-night camps in the Mölltal in Carinthia, giving families flexible options. At our camps, children are encouraged to try new activities, build confidence, and discover what they’re good at. They take part in fun outdoor games and sports—many for the very first time. English learning is part of everything we do. Through a mix of short classroom sessions and lots of outdoor activities, children practice speaking, build vocabulary, and improve their grammar. By using English naturally throughout the day, they become more confident, fluent, and comfortable with the language.",
 
-        adv_camp_title: "Adventure Camp (5-days / 5-nights)",
+        adv_camp_title: "English Adventure Camp Mölltal",
         adv_camp_desc1: "Every camp feels like a real adventure. Children stay in comfortable accommodation with others of the same age, with boys and girls staying in separate huts. Our goal is to help children feel relaxed, supported, and free to be themselves—because that’s when learning happens best.",
         adv_camp_desc2: "Kids are encouraged to try new activities, take healthy risks, and discover their strengths. From water sports to games and challenges, every day inspires confidence, teamwork, and a spirit of adventure.",
 
@@ -150,7 +150,7 @@ const translations = {
         camps_adventure_intro_title: "Neue Abenteuer erleben & Englisch lernen",
         camps_adventure_intro_desc: "Wir bieten sowohl Tagescamps als auch 5-Tage / 5-Nächte-Camps im Mölltal in Kärnten an und bieten Familien so flexible Möglichkeiten. In unseren Camps werden Kinder ermutigt, neue Aktivitäten auszuprobieren, Selbstvertrauen zu gewinnen und ihre Stärken zu entdecken. Sie nehmen an Spaß- und Outdoorspielen sowie sportlichen Aktivitäten teil – viele davon zum ersten Mal. Englischlernen ist Teil jedes Programms. Durch eine Mischung aus kurzen Unterrichtseinheiten und vielen Outdoor-Aktivitäten üben Kinder Sprechen, erweitern ihren Wortschatz und verbessern ihre Grammatik. Durch die natürliche Anwendung der Sprache im Alltag werden sie selbstbewusster, flüssiger und sicherer im Umgang mit Englisch.",
 
-        adv_camp_title: "Adventure Camp (5 Tage / 5 Nächte)",
+        adv_camp_title: "English Adventure Camp Mölltal",
         adv_camp_desc1: "Jedes Camp fühlt sich wie ein echtes Abenteuer an. Die Kinder wohnen in komfortabler Unterkunft mit Gleichaltrigen, wobei Jungen und Mädchen in separaten Hütten untergebracht sind. Unser Ziel ist es, den Kindern ein entspanntes, unterstützendes Umfeld zu bieten, in dem sie sie selbst sein können – denn nur so lernen sie am besten.",
         adv_camp_desc2: "Die Kinder werden ermutigt, neue Aktivitäten auszuprobieren, gesunde Risiken einzugehen und ihre Stärken zu entdecken. Von Wassersport bis hin zu Spielen und Herausforderungen inspiriert jeder Tag Selbstvertrauen, Teamwork und Abenteuerlust.",
 
