@@ -74,7 +74,7 @@ const translations = {
 
         // Camp Dates & Sign Up
         camp_dates_title: "Dates & Prices",
-        adv_camp_dates: "July 26 - 31",
+        adv_camp_dates: "Sunday 26 August - Friday 31 August",
         lake_camp_week1: "Week 1: July 13 - 17",
         lake_camp_week2: "Week 2: July 20 - 24",
         lake_camp_week3: "Week 3: August 10 - 14",
@@ -170,7 +170,7 @@ const translations = {
 
         // Camp Dates & Sign Up
         camp_dates_title: "Termine & Preise",
-        adv_camp_dates: "26. - 31. Juli",
+        adv_camp_dates: "Sonntag 26. August - Freitag 31. August",
         lake_camp_week1: "Woche 1: 13. - 17. Juli",
         lake_camp_week2: "Woche 2: 20. - 24. Juli",
         lake_camp_week3: "Woche 3: 10. - 14. August",
