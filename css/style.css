@@ -1,9 +1,11 @@
 :root {
     /* Colors (Edway Palette - Soft Navy Update) */
-    --soft-navy: #1e2a38;
-    --dark-navy: #0F1720;
-    --navy-text: #ffffff;
-    --navy-text-muted: rgba(255, 255, 255, 0.8);
+    --soft-navy: #E3F2FD;
+    /* Soft Baby Blue */
+    --dark-navy: #BBDEFB;
+    /* Slightly darker baby blue */
+    --navy-text: #1e2a38;
+    --navy-text-muted: rgba(30, 42, 56, 0.8);
 
     --black: #111111;
     --white: #ffffff;
@@ -43,7 +45,7 @@ body {
     font-size: 18px;
     /* Default larger size */
     line-height: 1.6;
-    color: var(--white);
+    color: var(--black);
     background-color: var(--soft-navy);
     -webkit-font-smoothing: antialiased;
 }
@@ -55,7 +57,8 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    color: var(--white);
+    color: var(--navy-text);
+    /* Dark Text for headings */
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -459,9 +462,10 @@ footer {
 }
 
 /* Dark Mode Utilities (Edway Alternating Style) */
+/* Dark Mode Utilities (Adapted for Light Blue Theme) */
 .bg-black {
     background-color: var(--dark-navy);
-    color: var(--white);
+    color: var(--navy-text);
 }
 
 .bg-black h1,
@@ -470,56 +474,57 @@ footer {
 .bg-black h4,
 .bg-black .contact-heading,
 .bg-black .field-label {
-    color: var(--white);
+    color: var(--navy-text);
 }
 
 .bg-black p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--navy-text-muted);
 }
 
-/* Invert cards in dark sections */
+/* Cards in light blue sections */
 .bg-black .service-card {
-    background-color: #1a242f;
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--navy-text);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .bg-black .service-card h3 {
-    color: var(--white);
+    color: var(--navy-text);
 }
 
 .bg-black .service-card p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--navy-text-muted);
 }
 
-/* Invert buttons in dark sections */
+/* Buttons in light blue sections */
 .bg-black .btn-primary {
-    background-color: var(--white);
-    color: var(--black);
-}
-
-.bg-black .btn-primary:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-/* Contact Modern Dark Inputs */
-.bg-black .text-field {
-    background-color: #333;
+    background-color: var(--navy-text);
     color: var(--white);
 }
 
+.bg-black .btn-primary:hover {
+    background-color: var(--navy-text-muted);
+}
+
+/* Contact Modern Inputs */
+.bg-black .text-field {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .bg-black .text-field::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .bg-black .submit-button {
-    background-color: var(--white);
-    color: var(--black);
-    border: 2px solid var(--white);
+    background-color: var(--navy-text);
+    color: var(--white);
+    border: none;
 }
 
 .bg-black .submit-button:hover {
-    background-color: #e5e5e5;
-    border-color: #e5e5e5;
+    background-color: var(--navy-text-muted);
 }
 
 /* Hero Section (Edway Style - Full Background) */
