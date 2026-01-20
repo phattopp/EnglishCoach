@@ -10,8 +10,8 @@ const translations = {
         nav_contact: "Contact",
 
         // Home / Hero
-        hero_title: "Professional English Coaching",
-        hero_subtitle: "Improve your Business English or join our Adventure Camps for Kids.",
+        hero_title: "Professional English Coaching and Summer Camps for Kids",
+        hero_subtitle: "Improve your Business English or join one of our English Summer Camps.",
 
         // About Us
         about_title: "About Us",
@@ -24,7 +24,7 @@ const translations = {
         coaching_intro: "Our Business and Technical English programs are designed for professionals and technical specialists who need to use English confidently and effectively in their daily work. We support employees at all levels and across a wide range of industries, including manufacturing, administration, IT, sales, marketing, human resources, and international management. All programs are practical, goal-oriented, and tailored to the real communication challenges of today’s workplace.",
 
         basic_coaching_title: "Basic English Coaching",
-        basic_coaching_desc: "This program is ideal for employees with a basic knowledge of English who want to strengthen their grammar and expand their vocabulary. The focus is on improving overall understanding and building a solid foundation for clear and effective workplace communication.",
+        basic_coaching_desc: "These programs are ideal for employees with a basic knowledge of English who want to strengthen their grammar and expand their vocabulary. The focus is on improving overall understanding and building a solid foundation for clear and effective workplace communication.",
 
         business_coaching_title: "Business English Coaching",
         business_coaching_desc: "Designed for professionals who already have a working knowledge of English and want to improve their communication skills in a business environment. Training focuses on key situations such as presentations, meetings, telephone calls, and negotiations. All courses are tailor-made to meet the specific needs and goals of each group or individual.",
@@ -98,8 +98,8 @@ const translations = {
         nav_contact: "Kontakt",
 
         // Home / Hero
-        hero_title: "Englisch Coaching für Profis",
-        hero_subtitle: "Verbessern Sie Ihr Business-Englisch oder erleben Sie Abenteuer in unseren Kids Camps.",
+        hero_title: "Professionelles Englisch-Coaching und Sommercamps für Kinder",
+        hero_subtitle: "Verbessern Sie Ihr Business-Englisch oder besuchen Sie eines unserer Englisch-Sommercamps.",
 
         // About Us
         about_title: "Über Uns",
