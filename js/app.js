@@ -62,7 +62,7 @@ const translations = {
         friendship_desc: "At camp, children form strong friendships that are often difficult to build in a classroom. Sharing adventures, games, and challenges helps them develop teamwork skills and creates friendships that can last a lifetime.",
 
         agenda_title: "What’s on the Agenda?",
-        agenda_desc1: "The English Adventure Camp takes place in Obervellach in the Mölltal every summer in July and August. The five-day program includes 5 nights’ accommodation with full board, adventure activities include rafting on the Möll, canyoning in Fragantbach, Ultimate Frisbee, and hiking in the surrounding woods.",
+        agenda_desc1: "The English Adventure Camp takes place in Obervellach in the Mölltal every summer. The five-day program includes 5 nights’ accommodation with full board, adventure activities include rafting on the Möll, canyoning in Fragantbach, Ultimate Frisbee, and hiking in the surrounding woods.",
         agenda_desc2: "Each morning begins with English lessons, a mix of classroom and outdoor activities covering vocabulary, conversation, and grammar. After lunch, children take part in exciting adventure activities every afternoon, followed by free time before dinner. Evenings end with campfires, treasure hunts, and fun social activities.",
         agenda_desc3: "Throughout the camp, children are fully supervised by our professional, native English-speaking staff which is led by Michael Topp who has been running summer camps for more than 20 years in Austria.",
 
@@ -292,5 +292,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         setInterval(nextSlide, slideInterval);
+    }
+
+    // Image Fan interaction for mobile
+    const fanContainer = document.querySelector('.image-fan-container');
+    if (fanContainer) {
+        // Toggle active class on click for mobile
+        fanContainer.addEventListener('click', () => {
+            if (window.innerWidth <= 992) {
+                fanContainer.classList.toggle('active');
+            }
+        });
+
+        // Use IntersectionObserver to fan out images when scrolled into view on mobile
+        const observerOptions = {
+            threshold: 0.6 // Trigger when 60% of the container is visible
+        };
+
+        const fanObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (window.innerWidth <= 992) {
+                    if (entry.isIntersecting) {
+                        fanContainer.classList.add('active');
+                    } else {
+                        // Reset when scrolling away so it fans out again next time
+                        fanContainer.classList.remove('active');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        fanObserver.observe(fanContainer);
     }
 });

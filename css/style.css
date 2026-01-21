@@ -1,9 +1,9 @@
 :root {
     /* Colors (Edway Palette - Soft Navy Update) */
-    --soft-navy: #E3F2FD;
-    /* Soft Baby Blue */
-    --dark-navy: #BBDEFB;
-    /* Slightly darker baby blue */
+    --soft-navy: #f0f7ff;
+    /* Very soft navy/blue */
+    --dark-navy: #e1effe;
+    /* Slightly darker soft blue */
     --navy-text: #1e2a38;
     --navy-text-muted: rgba(30, 42, 56, 0.8);
 
@@ -708,51 +708,61 @@ footer {
 /* Mobile adjustments for fan effect */
 @media (max-width: 992px) {
     .image-fan-container {
-        min-height: 300px;
+        min-height: 350px;
         cursor: pointer;
     }
 
-    /* On mobile, images start stacked - only rafting image visible */
-    .image-fan-container .fan-image-1,
-    .image-fan-container .fan-image-2 {
-        opacity: 0;
-        transform: translateX(0) translateY(0) rotate(0deg);
-        pointer-events: none;
+    /* On mobile, images start stacked - rafting image (fan-image-3) is on top */
+    .fan-image-1 {
+        z-index: 1;
     }
 
-    .image-fan-container .fan-image-3 {
+    .fan-image-2 {
+        z-index: 2;
+    }
+
+    .fan-image-3 {
+        z-index: 3;
+    }
+
+    .image-fan-container .fan-image-1,
+    .image-fan-container .fan-image-2 {
         opacity: 1;
-        transform: translateX(0) translateY(0) rotate(0deg);
+        /* Keep them opaque but behind */
+        transform: scale(0.95);
+        /* Slightly smaller so they are totally hidden behind the top one if needed */
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* When active class is added (via click or scroll), fan out the images */
     .image-fan-container.active .fan-image-1 {
-        opacity: 1;
-        transform: translateX(-10%) rotate(-5deg);
-        pointer-events: auto;
+        transform: translateX(-15%) rotate(-8deg) scale(1);
     }
 
     .image-fan-container.active .fan-image-2 {
-        opacity: 1;
-        transform: translateX(0) translateY(0) rotate(0deg);
-        pointer-events: auto;
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
     }
 
     .image-fan-container.active .fan-image-3 {
-        transform: translateX(10%) rotate(5deg);
+        transform: translateX(15%) rotate(8deg) scale(1);
     }
 
-    /* Disable hover effects on mobile */
+    /* Disable hover effects on mobile to prevent interference with click/scroll */
     .image-fan-container:hover .fan-image-1,
+    .image-fan-container:hover .fan-image-2,
     .image-fan-container:hover .fan-image-3 {
         transform: none;
     }
 
     .image-fan-container.active:hover .fan-image-1 {
-        transform: translateX(-10%) rotate(-5deg);
+        transform: translateX(-15%) rotate(-8deg);
+    }
+
+    .image-fan-container.active:hover .fan-image-2 {
+        transform: none;
     }
 
     .image-fan-container.active:hover .fan-image-3 {
-        transform: translateX(10%) rotate(5deg);
+        transform: translateX(15%) rotate(8deg);
     }
 }
