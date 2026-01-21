@@ -709,13 +709,50 @@ footer {
 @media (max-width: 992px) {
     .image-fan-container {
         min-height: 300px;
+        cursor: pointer;
     }
-    
-    .image-fan-container:hover .fan-image-1 {
+
+    /* On mobile, images start stacked - only rafting image visible */
+    .image-fan-container .fan-image-1,
+    .image-fan-container .fan-image-2 {
+        opacity: 0;
+        transform: translateX(0) translateY(0) rotate(0deg);
+        pointer-events: none;
+    }
+
+    .image-fan-container .fan-image-3 {
+        opacity: 1;
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+
+    /* When active class is added (via click or scroll), fan out the images */
+    .image-fan-container.active .fan-image-1 {
+        opacity: 1;
+        transform: translateX(-10%) rotate(-5deg);
+        pointer-events: auto;
+    }
+
+    .image-fan-container.active .fan-image-2 {
+        opacity: 1;
+        transform: translateX(0) translateY(0) rotate(0deg);
+        pointer-events: auto;
+    }
+
+    .image-fan-container.active .fan-image-3 {
+        transform: translateX(10%) rotate(5deg);
+    }
+
+    /* Disable hover effects on mobile */
+    .image-fan-container:hover .fan-image-1,
+    .image-fan-container:hover .fan-image-3 {
+        transform: none;
+    }
+
+    .image-fan-container.active:hover .fan-image-1 {
         transform: translateX(-10%) rotate(-5deg);
     }
-    
-    .image-fan-container:hover .fan-image-3 {
+
+    .image-fan-container.active:hover .fan-image-3 {
         transform: translateX(10%) rotate(5deg);
     }
 }
