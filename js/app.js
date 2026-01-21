@@ -99,8 +99,18 @@ const translations = {
         cta_send: "Send Message",
         success_title: "Thank you!",
         success_message: "Your message has been received.",
-        error_message: "Oops! Something went wrong. Please try again."
+        error_message: "Oops! Something went wrong. Please try again.",
+
+        // Testimonials
+        testimonials_title: "What Our Clients Say",
+        testimonial1_text: "The English Coach provided our team with exactly the technical vocabulary we needed. Highly recommended!",
+        testimonial1_author: "Andreas M., Project Manager",
+        testimonial2_text: "My kids came back from the Adventure Camp with so much more confidence in their English. They already want to go back next year!",
+        testimonial2_author: "Sarah L., Parent",
+        testimonial3_text: "The intensive English week was a highlight for our students. Professional, engaging, and very effective.",
+        testimonial3_author: "Mag. Elisabeth K., Teacher"
     },
+
     de: {
         nav_home: "Home",
         nav_coaching: "Coaching",
@@ -199,7 +209,16 @@ const translations = {
         cta_send: "Nachricht Senden",
         success_title: "Vielen Dank!",
         success_message: "Ihre Nachricht wurde empfangen.",
-        error_message: "Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+        error_message: "Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+
+        // Testimonials
+        testimonials_title: "Was unsere Kunden sagen",
+        testimonial1_text: "The English Coach hat unserem Team genau den technischen Wortschatz vermittelt, den wir brauchten. Sehr empfehlenswert!",
+        testimonial1_author: "Andreas M., Projektleiter",
+        testimonial2_text: "Meine Kinder kamen mit so viel mehr Selbstvertrauen in ihrem Englisch vom Adventure Camp zurück. Sie wollen nächstes Jahr unbedingt wieder hin!",
+        testimonial2_author: "Sarah L., Mutter",
+        testimonial3_text: "Die Intensiv-Englischwoche war ein Highlight für unsere Schüler. Professionell, motivierend und sehr effektiv.",
+        testimonial3_author: "Mag. Elisabeth K., Lehrerin"
     }
 };
 
