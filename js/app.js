@@ -300,34 +300,5 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(nextSlide, slideInterval);
     }
 
-    // Image Fan interaction for mobile
-    const fanContainer = document.querySelector('.image-fan-container');
-    if (fanContainer) {
-        // Toggle active class on click for mobile
-        fanContainer.addEventListener('click', () => {
-            if (window.innerWidth <= 992) {
-                fanContainer.classList.toggle('active');
-            }
-        });
 
-        // Use IntersectionObserver to fan out images when scrolled into view on mobile
-        const observerOptions = {
-            threshold: 0.6 // Trigger when 60% of the container is visible
-        };
-
-        const fanObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (window.innerWidth <= 992) {
-                    if (entry.isIntersecting) {
-                        fanContainer.classList.add('active');
-                    } else {
-                        // Reset when scrolling away so it fans out again next time
-                        fanContainer.classList.remove('active');
-                    }
-                }
-            });
-        }, observerOptions);
-
-        fanObserver.observe(fanContainer);
-    }
 });

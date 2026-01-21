@@ -640,129 +640,32 @@ footer {
     }
 }
 
-/* Image Fan-Out Effect */
-.image-fan-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    perspective: 1000px;
+/* Camps Image Grid */
+.camps-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
-.fan-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+.camps-image-grid img {
     width: 100%;
-    height: 100%;
+    height: 220px;
     object-fit: cover;
-    border-radius: var(--radius-image);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
+    border-radius: var(--radius-card);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.fan-image-1 {
-    z-index: 3;
+.camps-image-grid img:first-child {
+    grid-column: span 2;
+    height: 320px;
 }
 
-.fan-image-2 {
-    z-index: 2;
-    transform: translateX(0) translateY(0) rotate(0deg);
-}
-
-.fan-image-3 {
-    z-index: 1;
-    transform: translateX(0) translateY(0) rotate(0deg);
-}
-
-/* Hover effect - fan out when hovering over the container */
-.image-fan-container:hover .fan-image-1 {
-    transform: translateX(-15%) rotate(-8deg);
-    z-index: 3;
-}
-
-.image-fan-container:hover .fan-image-2 {
-    transform: translateX(0) translateY(0) rotate(0deg);
-    z-index: 2;
-}
-
-.image-fan-container:hover .fan-image-3 {
-    transform: translateX(15%) rotate(8deg);
-    z-index: 1;
-}
-
-/* Disable default image hover zoom for fan images */
-.fan-image:hover {
-    transform: translateX(0) translateY(0) rotate(0deg);
-}
-
-.image-fan-container:hover .fan-image-1:hover {
-    transform: translateX(-15%) rotate(-8deg) scale(1.02);
-}
-
-.image-fan-container:hover .fan-image-3:hover {
-    transform: translateX(15%) rotate(8deg) scale(1.02);
-}
-
-/* Mobile adjustments for fan effect */
-@media (max-width: 992px) {
-    .image-fan-container {
-        min-height: 350px;
-        cursor: pointer;
+@media (max-width: 768px) {
+    .camps-image-grid {
+        grid-template-columns: 1fr;
     }
 
-    /* On mobile, images start stacked - rafting image (fan-image-3) is on top */
-    .fan-image-1 {
-        z-index: 1;
-    }
-
-    .fan-image-2 {
-        z-index: 2;
-    }
-
-    .fan-image-3 {
-        z-index: 3;
-    }
-
-    .image-fan-container .fan-image-1,
-    .image-fan-container .fan-image-2 {
-        opacity: 1;
-        /* Keep them opaque but behind */
-        transform: scale(0.95);
-        /* Slightly smaller so they are totally hidden behind the top one if needed */
-        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* When active class is added (via click or scroll), fan out the images */
-    .image-fan-container.active .fan-image-1 {
-        transform: translateX(-15%) rotate(-8deg) scale(1);
-    }
-
-    .image-fan-container.active .fan-image-2 {
-        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
-    }
-
-    .image-fan-container.active .fan-image-3 {
-        transform: translateX(15%) rotate(8deg) scale(1);
-    }
-
-    /* Disable hover effects on mobile to prevent interference with click/scroll */
-    .image-fan-container:hover .fan-image-1,
-    .image-fan-container:hover .fan-image-2,
-    .image-fan-container:hover .fan-image-3 {
-        transform: none;
-    }
-
-    .image-fan-container.active:hover .fan-image-1 {
-        transform: translateX(-15%) rotate(-8deg);
-    }
-
-    .image-fan-container.active:hover .fan-image-2 {
-        transform: none;
-    }
-
-    .image-fan-container.active:hover .fan-image-3 {
-        transform: translateX(15%) rotate(8deg);
+    .camps-image-grid img:first-child {
+        grid-column: span 1;
     }
 }
