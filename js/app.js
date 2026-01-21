@@ -43,8 +43,8 @@ const translations = {
         // Schools
         schools_title: "English in Schools",
         schools_subtitle: "Intensive English Programs at your school",
-        schools_intro: "We offer a variety of English programs and tutoring services to support schools, teachers, and students at all levels. Our flexible approach allows us to tailor lessons to the specific needs of each class or individual student. These intensive English weeks with native English speakers help the children build on their existing language skills to strengthen their command of the language.",
-        schools_desc: "Our programs are organised directly with schools and take place on-site during regular school hours, making it easy to integrate English learning into the school day. We also collaborate with schools to provide preparation for the Cambridge First Certificate, ensuring students are fully supported in achieving their goals.",
+        schools_intro: "We offer a variety of English programs and tutoring services to support schools, teachers, and students at all levels. Our flexible approach allows us to provide lessons that meet the specific needs of each class or individual student. These intensive English weeks with native English speakers help the children build on their existing language skills to strengthen their command of the language.",
+        schools_desc: "Our programs are organised together with schools and take place on-site during regular school hours, making it easy to integrate English learning into the school day. We also collaborate with schools to provide preparation for the Cambridge First Certificate, ensuring students are fully supported in achieving their goals.",
 
         // Camps
         camps_title: "Summer Camps",
@@ -82,6 +82,7 @@ const translations = {
         lake_camp_week2: "Week 2: July 20 - 24",
         lake_camp_week3: "Week 3: August 10 - 14",
         sign_up_btn: "Sign Up Now",
+        book_lesson_btn: "Book a Lesson",
 
         phone_title: "Phone-Free Fun",
         phone_desc: "We encourage children to leave their phones at home to fully enjoy the camp experience. Phones can be brought if necessary, but use will be limited and children may be asked to put them away if they are using them too much.",
@@ -181,6 +182,7 @@ const translations = {
         lake_camp_week2: "Woche 2: 20. - 24. Juli",
         lake_camp_week3: "Woche 3: 10. - 14. August",
         sign_up_btn: "Jetzt Anmelden",
+        book_lesson_btn: "Stunde buchen",
 
         phone_title: "Telefonfreie Woche",
         phone_desc: "Wir empfehlen, dass Kinder ihre Handys zu Hause lassen, um das Camp voll zu genießen. Handys dürfen mitgebracht werden, die Nutzung wird jedoch begrenzt und bei zu häufiger Nutzung aufgefordert, diese wegzulegen.",
