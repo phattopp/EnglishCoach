@@ -108,8 +108,10 @@ const translations = {
         testimonial2_text: "My kids came back from the Adventure Camp with so much more confidence in their English. They already want to go back next year!",
         testimonial2_author: "Sarah L., Parent",
         testimonial3_text: "The intensive English week was a highlight for our students. Professional, engaging, and very effective.",
-        testimonial3_author: "Mag. Elisabeth K., Teacher"
+        testimonial3_author: "Mag. Elisabeth K., Teacher",
+        add_testimonial_btn: "Add a Testimonial"
     },
+
 
     de: {
         nav_home: "Home",
@@ -218,8 +220,10 @@ const translations = {
         testimonial2_text: "Meine Kinder kamen mit so viel mehr Selbstvertrauen in ihrem Englisch vom Adventure Camp zurück. Sie wollen nächstes Jahr unbedingt wieder hin!",
         testimonial2_author: "Sarah L., Mutter",
         testimonial3_text: "Die Intensiv-Englischwoche war ein Highlight für unsere Schüler. Professionell, motivierend und sehr effektiv.",
-        testimonial3_author: "Mag. Elisabeth K., Lehrerin"
+        testimonial3_author: "Mag. Elisabeth K., Lehrerin",
+        add_testimonial_btn: "Testimonial hinzufügen"
     }
+
 };
 
 // Language Switcher Logic
