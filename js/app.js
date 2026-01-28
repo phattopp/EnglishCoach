@@ -92,11 +92,11 @@ const translations = {
         team_desc2: "We are more than a group of educators—we are teachers, coaches, consultants, friends, and role models. Together, we create a supportive, inspiring environment where children can learn, grow, and feel confident.",
 
         contact_title: "Questions? We’re here to help.",
-        contact_subtitle: "Please contact Michael Topp directly by email to submit your request or for any further information.",
+        contact_subtitle: "Ready for the next step? We look forward to your message.",
         label_name: "Name",
         label_email: "Email Address",
         label_message: "Message",
-        cta_send: "Contact Michael",
+        cta_send: "Send Message",
         success_title: "Thank you!",
         success_message: "Your message has been received.",
         error_message: "Oops! Something went wrong. Please try again.",
@@ -204,11 +204,11 @@ const translations = {
         team_desc2: "Wir sind mehr als ein Team von Lehrkräften – wir sind Lehrer, Coaches, Berater, Freunde und Vorbilder. Gemeinsam schaffen wir eine unterstützende, inspirierende Umgebung, in der Kinder lernen, wachsen und Selbstvertrauen gewinnen können.",
 
         contact_title: "Fragen? Wir sind für Sie da.",
-        contact_subtitle: "Bitte kontaktieren Sie Michael Topp direkt per E-Mail, um Ihre Anfrage zu senden oder für weitere Informationen.",
+        contact_subtitle: "Bereit für den nächsten Schritt? Wir freuen uns auf Ihre Nachricht.",
         label_name: "Name",
-        label_email: "Email Address",
+        label_email: "Email Adresse",
         label_message: "Nachricht",
-        cta_send: "Michael kontaktieren",
+        cta_send: "Nachricht Senden",
         success_title: "Vielen Dank!",
         success_message: "Ihre Nachricht wurde empfangen.",
         error_message: "Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
@@ -276,6 +276,54 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('lang') || 'de';
     setLanguage(savedLang);
 
+    // Header scroll effect
+    const header = document.querySelector('header');
+    const scrollThreshold = 50;
+
+    function handleScroll() {
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Check initial state
+
+    // Form Handling
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            submitBtn.disabled = true;
+            submitBtn.innerText = translations[document.documentElement.lang].id === 'de' ? 'Senden...' : 'Sending...';
+
+            try {
+                // In a real scenario, this would POST to /api/submit
+                // For now, we simulate a delay and success
+                // await fetch('/api/submit', { method: 'POST', body: JSON.stringify(data) });
+
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network request
+
+                // Show success
+                form.style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+                document.querySelector('.contact-heading').style.display = 'none';
+
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('form-error').style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalText;
+            }
+        });
+    }
 
     // Hero Slider Logic
     const slides = document.querySelectorAll('.hero-slider .slide');
@@ -292,5 +340,110 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(nextSlide, slideInterval);
     }
 
+    // Team Image Slider
+    const teamSlides = document.querySelectorAll('.team-slide');
+    if (teamSlides.length > 1) {
+        let currentTeamSlide = 0;
+        const teamSlideInterval = 4000; // Change every 4 seconds
+
+        function nextTeamSlide() {
+            teamSlides[currentTeamSlide].classList.remove('active');
+            currentTeamSlide = (currentTeamSlide + 1) % teamSlides.length;
+            teamSlides[currentTeamSlide].classList.add('active');
+        }
+
+        setInterval(nextTeamSlide, teamSlideInterval);
+    }
+
+    // Scroll Reveal Animation using Intersection Observer
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+    if (scrollRevealElements.length > 0 && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '0px 0px -50px 0px', // Trigger slightly before element is fully in view
+            threshold: 0.1
+        });
+
+        scrollRevealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+    } else {
+        // Fallback: just show elements if IntersectionObserver not supported
+        scrollRevealElements.forEach(el => {
+            el.classList.add('revealed');
+        });
+    }
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+
+    let currentImageIndex = 0;
+    const galleryImages = Array.from(galleryItems);
+
+    function openLightbox(index) {
+        currentImageIndex = index;
+        const img = galleryImages[index];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function showPrevImage() {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        const img = galleryImages[currentImageIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+    }
+
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        const img = galleryImages[currentImageIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+    }
+
+    // Event listeners
+    galleryItems.forEach((img, index) => {
+        img.addEventListener('click', () => openLightbox(index));
+    });
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', showPrevImage);
+    if (lightboxNext) lightboxNext.addEventListener('click', showNextImage);
+
+    // Close on background click
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrevImage();
+        if (e.key === 'ArrowRight') showNextImage();
+    });
 
 });

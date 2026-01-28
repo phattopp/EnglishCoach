@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -45,8 +46,7 @@
         </div>
     </header>
 
-    <!-- Hero Section (Full Background) -->
-    <!-- Hero Section (Slider) -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-slider">
             <div class="slide active" style="background-image: url('images/optimized/banner.jpg');"></div>
@@ -55,82 +55,110 @@
             <div class="slide" style="background-image: url('images/optimized/img-0028.jpg');"></div>
             <div class="slide" style="background-image: url('images/optimized/mike-ai-landscape.jpg');"></div>
         </div>
-        <!-- Note: EAC Illustration.pdf cannot be used as a background image. Please provide a JPG/PNG version. -->
+        <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <div class="hero-text">
-                <h1 data-key="hero_title">Professionelles Englisch-Coaching und Sommercamps für Kinder</h1>
-                <p data-key="hero_subtitle">Verbessern Sie Ihr Business-Englisch oder besuchen Sie eines unserer
-                    Englisch-Sommercamps.</p>
-                <div style="margin-top: 32px;">
-                    <a href="#coaching" class="btn btn-primary" data-key="nav_coaching"
-                        style="background-color: white; color: black;">Start Now</a>
+            <div class="hero-split">
+                <div class="hero-left">
+                    <span class="hero-badge"><i class="fa-solid fa-graduation-cap"></i> Since 2004</span>
+                    <h1 data-key="hero_title">Professionelles Englisch-Coaching und Sommercamps für Kinder</h1>
+                </div>
+                <div class="hero-right">
+                    <p data-key="hero_subtitle">Verbessern Sie Ihr Business-Englisch oder besuchen Sie eines unserer
+                        Englisch-Sommercamps.</p>
+                    <div class="hero-cta">
+                        <a href="#coaching" class="btn btn-primary">
+                            <i class="fa-solid fa-arrow-right"></i> Start Now
+                        </a>
+                        <a href="#camps" class="btn btn-outline">
+                            <i class="fa-solid fa-campground"></i> Summer Camps
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
     </section>
 
-    <!-- Coaching Section (Black Background) -->
-    <section id="coaching" class="section-padding bg-black">
+    <!-- Coaching Section -->
+    <section id="coaching" class="section-padding">
         <div class="container">
-            <h2 class="text-center" data-key="coaching_title">Business & Technical English</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;" data-key="coaching_intro">Unsere
-                Business- und Technical-English-Programme...</p>
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Professional Development</span>
+                <h2 data-key="coaching_title">Business & Technical English</h2>
+                <p class="section-intro" data-key="coaching_intro">Unsere
+                    Business- und Technical-English-Programme...</p>
+            </div>
 
             <div class="services-grid">
                 <!-- Basic English -->
                 <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
                     <h3 data-key="basic_coaching_title">Basic English Coaching</h3>
                     <p data-key="basic_coaching_desc">Ideal für Mitarbeitende mit grundlegenden Englischkenntnissen...
                     </p>
-                    <img src="images/basic-business.jpg" alt="Basic Business English" loading="lazy"
-                        style="border-radius: var(--radius-card); margin-top: 1rem;">
+                    <img src="images/basic-business.jpg" alt="Basic Business English" loading="lazy">
                 </div>
                 <!-- Business English -->
                 <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
                     <h3 data-key="business_coaching_title">Business English Coaching</h3>
                     <p data-key="business_coaching_desc">Für Fachkräfte mit guten Englischkenntnissen...</p>
-                    <img src="images/optimized/mike-ai-copy.jpg" alt="Business English Coaching" loading="lazy"
-                        style="border-radius: var(--radius-card); margin-top: 1rem;">
+                    <img src="images/optimized/mike-ai-copy.jpg" alt="Business English Coaching" loading="lazy">
                 </div>
                 <!-- Technical English -->
                 <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
                     <h3 data-key="technical_coaching_title">Technical English</h3>
                     <p data-key="technical_coaching_desc">Entwickelt in enger Zusammenarbeit mit unseren Kunden...</p>
-                    <img src="images/optimized/apprentice-lab.jpg" alt="Apprentice Lab" loading="lazy"
-                        style="border-radius: var(--radius-card); margin-top: 1rem;">
+                    <img src="images/optimized/apprentice-lab.jpg" alt="Apprentice Lab" loading="lazy">
                 </div>
             </div>
 
-            <div class="text-center" style="margin-top: 4rem; padding: 0 20px;">
-                <p style="font-size: 1.2rem; color: var(--navy-text); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;"
-                    data-key="coaching_contact_text">
-                    Please contact Michael Topp directly by email to submit a request for any of the three Business
-                    English services offered.
+            <div class="cta-box-mini">
+                <p data-key="coaching_contact_text">
+                    Interested in Business English coaching? Get in touch to discuss your needs.
                 </p>
-                <a href="mailto:mike@englishcoach.at" class="btn btn-primary" data-key="nav_contact">Contact Michael</a>
+                <a href="#contact" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-down"></i> Contact Us
+                </a>
             </div>
-
 
         </div>
     </section>
 
-
-
-    <!-- Camps Section (White Background) -->
-    <section id="camps" class="section-padding bg-white">
+    <!-- Camps Section -->
+    <section id="camps" class="section-padding section-alt">
         <div class="container">
-            <img src="images/banner-inner6.jpg" alt="Summer Camps Banner" loading="lazy"
-                style="width: 100%; height: auto; border-radius: var(--radius-image); margin-bottom: 3rem; object-fit: cover;">
-            <h2 class="text-center" data-key="camps_title">Sommercamps</h2>
+            <div class="camps-hero">
+                <img src="images/banner-inner6.jpg" alt="Summer Camps Banner" loading="lazy" class="camps-banner">
+                <div class="camps-hero-content">
+                    <span class="section-tag light"><i class="fa-solid fa-sun"></i> Summer 2026</span>
+                    <h2 data-key="camps_title">Sommercamps</h2>
+                </div>
+            </div>
 
             <!-- Mission -->
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
-                <h3 data-key="camps_mission_title">Unsere Mission</h3>
-                <p data-key="camps_mission_desc"></p>
+            <div class="mission-block">
+                <div class="mission-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="mission-content">
+                    <h3 data-key="camps_mission_title">Unsere Mission</h3>
+                    <p data-key="camps_mission_desc"></p>
+                </div>
             </div>
 
             <!-- Intro Feature -->
-            <div class="about-grid" style="margin-bottom: 4rem;">
+            <div class="about-grid feature-grid">
                 <div class="about-img camps-image-grid">
                     <img src="images/optimized/group-pic.jpg" alt="Group Activities" loading="lazy">
                     <img src="images/optimized/lesson-time.jpg" alt="English Lessons" loading="lazy">
@@ -141,184 +169,270 @@
                     <h3 data-key="camps_adventure_intro_title">Neue Abenteuer erleben</h3>
                     <p data-key="camps_adventure_intro_p1">At our camps, children are encouraged to step out of their
                         comfort zones, try new activities, and
-                        build confidence while discovering their own strengths. They take part in a wide range of fun
-                        outdoor games and adventurous sports—many of which they may be experiencing for the very first
-                        time. Teamwork, creativity, and a sense of adventure are at the heart of everything we do.</p>
+                        build confidence while discovering their own strengths.</p>
                     <p data-key="camps_adventure_intro_p2">We offer day camps which take place down at a lake with the
                         main activity being SUP tours around
-                        the lake every day. We also offer a camp which runs over a full week in the beautiful Mölltal
-                        region of Carinthia where the children sleep in Canadian styles log cabins with access to a
-                        communal hut for indoors and group activities. These 2 options give families flexible options to
-                        suit their needs during the summer months and wether children join us for the day camps or stay
-                        for the full week experience, they enjoy a safe, supportive, and inspiring environment.</p>
+                        the lake every day.</p>
                     <p data-key="camps_adventure_intro_p3">English learning is woven into every part of the camp
-                        experience. Through a combination of age
-                        and curriculum appropriate classroom sessions and plenty of outdoor activities, children
-                        practice speaking, expand their vocabulary, and improve their grammar. By using English
-                        throughout the day—in games, conversations, and challenges—they become more confident, fluent,
-                        and comfortable using the language in real-life situations.</p>
+                        experience.</p>
                 </div>
             </div>
 
             <div class="services-grid grid-2">
-                <div class="service-card">
+                <div class="service-card camp-card">
+                    <div class="camp-badge">
+                        <i class="fa-solid fa-mountain"></i> Adventure
+                    </div>
                     <h3 data-key="adv_camp_title">Adventure Camp</h3>
                     <p data-key="adv_camp_desc1"></p>
-                    <p data-key="adv_camp_desc2" style="margin-top: 1rem;"></p>
-                    <p data-key="adv_camp_desc3" style="margin-top: 1rem;"></p>
+                    <p data-key="adv_camp_desc2"></p>
+                    <p data-key="adv_camp_desc3"></p>
 
-                    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1);">
-                        <h4 data-key="camp_dates_title">Dates & Prices</h4>
-                        <ul style="list-style: none; margin-bottom: 1rem;">
-                            <li style="margin-bottom: 0.5rem;"><strong data-key="adv_camp_dates"></strong></li>
-                            <li>€650</li>
-                        </ul>
-                        <a href="https://form.jotform.com/260211461742346" class="btn btn-primary" target="_blank"
-                            data-key="sign_up_btn">Sign Up Now</a>
+                    <div class="camp-features">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-water"></i>
+                            <span>Rafting</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>Hiking</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-campground"></i>
+                            <span>Log Cabins</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Full Board</span>
+                        </div>
                     </div>
 
-                    <br>
-                    <img src="images/optimized/group-pic-hike.jpg" alt="Hiking" loading="lazy"
-                        style="border-radius: var(--radius-card); margin-top: 1rem;">
-                    <img src="images/optimized/group-pic-uk.jpg" alt="Group Activities UK" loading="lazy"
-                        style="border-radius: var(--radius-card); margin-top: 1rem;">
+                    <div class="camp-pricing">
+                        <div class="price-header">
+                            <i class="fa-regular fa-calendar"></i>
+                            <h4 data-key="camp_dates_title">Dates & Prices</h4>
+                        </div>
+                        <ul>
+                            <li><strong data-key="adv_camp_dates"></strong></li>
+                            <li class="price"><span>€650</span> per child</li>
+                        </ul>
+                        <a href="https://form.jotform.com/260211461742346" class="btn btn-primary" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> <span data-key="sign_up_btn">Sign Up Now</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card">
+
+                <div class="service-card camp-card">
+                    <div class="camp-badge lake">
+                        <i class="fa-solid fa-sailboat"></i> Lake Days
+                    </div>
                     <h3 data-key="lake_camp_title">Lake Days at Keutschachersee</h3>
                     <p data-key="lake_camp_intro"></p>
-                    <h4 data-key="activities_title" style="margin-top: 1rem;">Aktivitäten</h4>
+                    <h4 data-key="activities_title">Aktivitäten</h4>
                     <p data-key="activities_desc"></p>
 
-                    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1);">
-                        <h4 data-key="camp_dates_title">Dates & Prices</h4>
-                        <ul style="list-style: none; margin-bottom: 1rem;">
-                            <li style="margin-bottom: 0.5rem;"><strong data-key="lake_camp_week1"></strong></li>
-                            <li style="margin-bottom: 0.5rem;"><strong data-key="lake_camp_week2"></strong></li>
-                            <li style="margin-bottom: 0.5rem;"><strong data-key="lake_camp_week3"></strong></li>
-                            <li>€360</li>
-                        </ul>
-                        <a href="https://form.jotform.com/260263089320351" class="btn btn-primary" target="_blank"
-                            data-key="sign_up_btn">Sign Up Now</a>
+                    <div class="camp-features">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-person-swimming"></i>
+                            <span>SUP Tours</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                            <span>Games</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Max 15 Kids</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-life-ring"></i>
+                            <span>Safety First</span>
+                        </div>
                     </div>
 
-                    <br>
-                    <img src="images/optimized/lying-on-sup.jpg" alt="Lying on SUP" loading="lazy"
-                        style="border-radius: var(--radius-card); margin-top: 1rem;">
+                    <div class="camp-pricing">
+                        <div class="price-header">
+                            <i class="fa-regular fa-calendar"></i>
+                            <h4 data-key="camp_dates_title">Dates & Prices</h4>
+                        </div>
+                        <ul>
+                            <li><strong data-key="lake_camp_week1"></strong></li>
+                            <li><strong data-key="lake_camp_week2"></strong></li>
+                            <li><strong data-key="lake_camp_week3"></strong></li>
+                            <li class="price"><span>€360</span> per child</li>
+                        </ul>
+                        <a href="https://form.jotform.com/260263089320351" class="btn btn-primary" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> <span data-key="sign_up_btn">Sign Up Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camp Gallery -->
+            <div class="camp-gallery">
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/optimized/group-pic-hike.jpg" alt="Hiking adventure" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/optimized/group-pic-uk.jpg" alt="Group activities" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/optimized/lying-on-sup.jpg" alt="SUP on the lake" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/optimized/boys-on-sup.jpg" alt="Kids on paddleboards" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/optimized/raft-with-girls.jpg" alt="Rafting fun" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/optimized/water-in-face.jpg" alt="Water activities" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Kids Camp Team Section -->
-    <section class="section-padding bg-soft">
+    <section class="section-padding">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <h3 data-key="team_title">Unser Kids Camp Team</h3>
-                <p data-key="team_desc1" style="max-width: 800px; margin: 0 auto;"></p>
-            </div>
             <div class="about-grid">
-                <div class="about-img">
-                    <img src="images/optimized/lake-days-team.jpg" alt="Lake Days Team" loading="lazy">
+                <div class="about-text">
+                    <span class="section-tag"><i class="fa-solid fa-users"></i> Our Team</span>
+                    <h3 data-key="team_title">Unser Kids Camp Team</h3>
+                    <p data-key="team_desc1"></p>
                 </div>
-                <div class="about-img">
-                    <img src="images/optimized/water-in-face.jpg" alt="Water Fun" loading="lazy"
-                        style="margin-bottom: 2rem;">
-                    <img src="images/optimized/ronja.jpg" alt="Ronja - Team Member" loading="lazy">
+                <div class="about-img team-slider">
+                    <img src="images/optimized/lake-days-team.jpg" alt="Lake Days Team" class="team-slide active"
+                        loading="lazy">
+                    <img src="images/optimized/water-in-face.jpg" alt="Water Fun" class="team-slide" loading="lazy">
+                    <img src="images/optimized/ronja.jpg" alt="Ronja - Team Member" class="team-slide" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Schools Section (White Background) -->
-    <section id="schools" class="section-padding bg-white alternate">
+    <!-- Schools Section -->
+    <section id="schools" class="section-padding section-cream">
         <div class="container">
-            <h2 class="text-center" data-key="schools_title">Englisch in Schulen</h2>
-            <p class="text-center" style="font-size: 1.2rem; margin-bottom: 3rem;" data-key="schools_subtitle">Intensive
-                English Programs</p>
-            <div class="about-grid">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-school"></i> For Schools</span>
+                <h2 data-key="schools_title">Englisch in Schulen</h2>
+                <p class="section-intro" data-key="schools_subtitle">Intensive English Programs</p>
+            </div>
+
+            <div class="about-grid reverse">
                 <div class="about-text">
                     <p data-key="schools_intro"></p>
-                    <p data-key="schools_desc" style="margin-top: 1rem;"></p>
+                    <p data-key="schools_desc"></p>
                 </div>
                 <div class="about-img">
                     <img src="images/optimized/learn-english.jpg" alt="Schools" loading="lazy">
                 </div>
             </div>
 
-            <div class="services-grid grid-2" style="margin-top: 4rem;">
+            <div class="services-grid grid-2">
                 <!-- Private Tutoring -->
                 <div class="service-card">
-                    <h3 data-key="private_tutoring_title">Private Einzel-Nachhilfe</h3>
-                    <p data-key="private_tutoring_intro" style="margin-bottom: 1rem;"></p>
-                    <p data-key="private_tutoring_desc1"></p>
-                    <p data-key="private_tutoring_desc2" style="margin-top: 1rem;"></p>
-                    <div style="margin-top: 2rem;">
-                        <a href="mailto:mike@englishcoach.at" class="btn btn-primary" data-key="book_lesson_btn">Book a
-                            Lesson</a>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
                     </div>
-                    <img src="images/optimized/face-to-face.jpg" alt="Face to Face" loading="lazy"
-                        style="border-radius: var(--radius-card); margin-top: 1rem;">
+                    <h3 data-key="private_tutoring_title">Private Einzel-Nachhilfe</h3>
+                    <p data-key="private_tutoring_intro"></p>
+                    <p data-key="private_tutoring_desc1"></p>
+                    <p data-key="private_tutoring_desc2"></p>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fa-solid fa-calendar-check"></i> <span data-key="book_lesson_btn">Book a Lesson</span>
+                    </a>
+                    <img src="images/optimized/face-to-face.jpg" alt="Face to Face" loading="lazy">
                 </div>
                 <!-- Exam Prep -->
                 <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-file-pen"></i>
+                    </div>
                     <h3 data-key="exam_prep_title">Prüfungsvorbereitung</h3>
                     <p data-key="exam_prep_desc">Wir bieten Unterstützung für Schüler...</p>
-                    <img src="images/optimized/tutoring.jpg" alt="Tutoring" loading="lazy"
-                        style="border-radius: var(--radius-card); margin-top: 1rem;">
+                    <div class="exam-badges">
+                        <span class="exam-badge"><i class="fa-solid fa-award"></i> Cambridge</span>
+                        <span class="exam-badge"><i class="fa-solid fa-certificate"></i> A-Levels</span>
+                        <span class="exam-badge"><i class="fa-solid fa-scroll"></i> Matura</span>
+                    </div>
+                    <img src="images/optimized/tutoring.jpg" alt="Tutoring" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="section-padding bg-soft">
+    <section id="testimonials" class="section-padding section-alt">
         <div class="container">
-            <h2 class="text-center" style="margin-bottom: 4rem;" data-key="testimonials_title">Was unsere Kunden sagen
-            </h2>
+            <div class="section-header centered">
+                <span class="section-tag"><i class="fa-solid fa-comments"></i> Reviews</span>
+                <h2 data-key="testimonials_title">Was unsere Kunden sagen</h2>
+            </div>
+
             <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                     <p class="testimonial-text" data-key="testimonial1_text"></p>
                     <div class="testimonial-author">
+                        <i class="fa-solid fa-user-tie"></i>
                         <strong data-key="testimonial1_author"></strong>
                     </div>
                 </div>
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                     <p class="testimonial-text" data-key="testimonial2_text"></p>
                     <div class="testimonial-author">
+                        <i class="fa-solid fa-user"></i>
                         <strong data-key="testimonial2_author"></strong>
                     </div>
                 </div>
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                     <p class="testimonial-text" data-key="testimonial3_text"></p>
                     <div class="testimonial-author">
+                        <i class="fa-solid fa-chalkboard-user"></i>
                         <strong data-key="testimonial3_author"></strong>
                     </div>
                 </div>
             </div>
 
-            <!-- Add Testimonial Button -->
-            <div class="text-center" style="margin-top: 4rem;">
-                <a href="https://form.jotform.com/260232920759357" class="btn btn-secondary" target="_blank"
-                    data-key="add_testimonial_btn">Testimonial hinzufügen</a>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="https://form.jotform.com/260232920759357" class="btn btn-secondary" target="_blank">
+                    <i class="fa-solid fa-plus"></i> <span data-key="add_testimonial_btn">Testimonial hinzufügen</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section (White Background) -->
-    <section id="about" class="section-padding bg-white alternate">
+    <!-- About Section -->
+    <section id="about" class="section-padding">
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
+                    <span class="section-tag"><i class="fa-solid fa-info-circle"></i> About</span>
                     <h2 data-key="about_title">Über Uns</h2>
                     <p data-key="about_text1"></p>
-                    <p data-key="about_text2" style="margin-top: 1rem;"></p>
-                    <p data-key="about_text3" style="margin-top: 1rem;"></p>
+                    <p data-key="about_text2"></p>
+                    <p data-key="about_text3"></p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Students Taught</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Native Speakers</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-img">
                     <img src="images/optimized/hero-ai.jpg" alt="Michael Topp" loading="lazy">
@@ -327,30 +441,69 @@
         </div>
     </section>
 
-    <!-- Contact Section (Black Background) -->
-    <section id="contact" class="section-padding contact-modern bg-black">
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding section-dark">
         <div class="container">
-            <div class="contact-wrap">
-                <h2 class="contact-heading" data-key="contact_title">Questions? We’re here to help.</h2>
-                <div class="text-center" style="margin-top: 2rem;">
-                    <p style="font-size: 1.2rem; color: #ccc; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;"
-                        data-key="contact_subtitle">
-                        Please contact Michael Topp directly by email to submit your request or for any further
-                        information.
-                    </p>
-                    <a href="mailto:mike@englishcoach.at" class="btn btn-primary btn-large" data-key="cta_send"
-                        style="padding: 0 48px; height: 62px; font-size: 18px;">Contact Michael</a>
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <span class="section-tag light"><i class="fa-solid fa-envelope"></i> Get in Touch</span>
+                    <h2 class="contact-heading" data-key="contact_title">Questions? We're here to help.</h2>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-user"></i>
+                            <div>
+                                <strong>Michael Topp</strong>
+                                <span>CEO & Lead Adventure Guide</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span>Fischlstrasse 16</span>
+                                <span>A-9020 Klagenfurt</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+436766414143">+43 676 641 41 43</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:mike@englishcoach.at">mike@englishcoach.at</a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="contact-info" style="margin-top: 4rem; text-align: center;">
-                    <p><strong>Michael Topp</strong></p>
-                    <p>Fischlstrasse 16, A-9020 Klagenfurt</p>
-                    <p><span style="color: var(--navy-text); font-weight: 600;">Tel:</span> <a href="tel:+436766414143"
-                            style="text-decoration: underline; color: white;">+43 676 641 41
-                            43</a></p>
-                    <p><span style="color: var(--navy-text); font-weight: 600;">Email:</span> <a
-                            href="mailto:mike@englishcoach.at"
-                            style="text-decoration: underline; color: white;">mike@englishcoach.at</a></p>
+                <div class="contact-form-panel">
+                    <form id="contact-form" action="/api/submit" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="field-label" data-key="label_name">Name</label>
+                            <input type="text" class="text-field" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="field-label" data-key="label_email">Email Address</label>
+                            <input type="email" class="text-field" id="email" name="email"
+                                placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="field-label" data-key="label_message">Message</label>
+                            <textarea class="text-field textarea" id="message" name="message"
+                                placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <i class="fa-solid fa-paper-plane"></i> <span data-key="cta_send">Send Message</span>
+                        </button>
+                    </form>
+                    <div id="form-success" style="display:none;" class="form-message success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3 data-key="success_title">Thank you!</h3>
+                        <p data-key="success_message">Your message has been received.</p>
+                    </div>
+                    <div id="form-error" style="display:none;" class="form-message error">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <p data-key="error_message">Oops! Something went wrong. Please try again.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -359,9 +512,34 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 The English Coach. All Rights Reserved.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="The English Coach" class="footer-logo">
+                    <p>Professional English Coaching & Summer Camps in Austria</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#coaching"><i class="fa-solid fa-briefcase"></i> Coaching</a>
+                    <a href="#camps"><i class="fa-solid fa-campground"></i> Camps</a>
+                    <a href="#schools"><i class="fa-solid fa-school"></i> Schools</a>
+                    <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 The English Coach. All Rights Reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+        </div>
+    </div>
 
     <script src="js/app.js"></script>
 </body>
