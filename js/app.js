@@ -286,20 +286,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerText;
+            const currentLang = document.documentElement.lang || 'en';
+
             submitBtn.disabled = true;
-            submitBtn.innerText = translations[document.documentElement.lang].id === 'de' ? 'Senden...' : 'Sending...';
+            submitBtn.innerText = currentLang === 'de' ? 'Senden...' : 'Sending...';
 
             try {
-                // In a real scenario, this would POST to /api/submit
-                // For now, we simulate a delay and success
-                // await fetch('/api/submit', { method: 'POST', body: JSON.stringify(data) });
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
 
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network request
-
-                // Show success
-                form.style.display = 'none';
-                document.getElementById('form-success').style.display = 'block';
-                document.querySelector('.contact-heading').style.display = 'none';
+                if (response.ok) {
+                    // Show success
+                    form.style.display = 'none';
+                    document.getElementById('form-success').style.display = 'block';
+                    document.querySelector('.contact-heading').style.display = 'none';
+                } else {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Submission failed');
+                }
 
             } catch (error) {
                 console.error('Error:', error);
