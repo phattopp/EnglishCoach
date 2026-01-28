@@ -305,11 +305,17 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerText = translations[document.documentElement.lang].id === 'de' ? 'Senden...' : 'Sending...';
 
             try {
-                // In a real scenario, this would POST to /api/submit
-                // For now, we simulate a delay and success
-                // await fetch('/api/submit', { method: 'POST', body: JSON.stringify(data) });
+                const response = await fetch('/api/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
 
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network request
+                if (!response.ok) {
+                    throw new Error('Form submission failed');
+                }
 
                 // Show success
                 form.style.display = 'none';

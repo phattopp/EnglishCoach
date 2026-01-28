@@ -1,0 +1,9 @@
+{
+  "name": "englishcoach",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The English Coach website",
+  "dependencies": {
+    "mimetext": "^3.0.24"
+  }
+}

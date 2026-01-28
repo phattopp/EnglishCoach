@@ -1,0 +1,11 @@
+name = "englishcoach"
+compatibility_date = "2024-01-01"
+
+[vars]
+CONTACT_EMAIL = "mike@englishcoach.at"
+
+# Email binding for sending contact form submissions
+# The sender must be from a domain with Email Routing enabled
+send_email = [
+    { name = "EMAIL", destination_address = "mike@englishcoach.at" }
+]
