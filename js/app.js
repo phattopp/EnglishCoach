@@ -276,49 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('lang') || 'de';
     setLanguage(savedLang);
 
-    // Form Handling
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerText;
-            const currentLang = document.documentElement.lang || 'en';
-
-            submitBtn.disabled = true;
-            submitBtn.innerText = currentLang === 'de' ? 'Senden...' : 'Sending...';
-
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: JSON.stringify(data),
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    // Show success
-                    form.style.display = 'none';
-                    document.getElementById('form-success').style.display = 'block';
-                    document.querySelector('.contact-heading').style.display = 'none';
-                } else {
-                    const errorData = await response.json();
-                    throw new Error(errorData.error || 'Submission failed');
-                }
-
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('form-error').style.display = 'block';
-                submitBtn.disabled = false;
-                submitBtn.innerText = originalText;
-            }
-        });
-    }
 
     // Hero Slider Logic
     const slides = document.querySelectorAll('.hero-slider .slide');
