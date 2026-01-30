@@ -1497,13 +1497,14 @@ footer {
         z-index: 1001;
     }
 
-    header.menu-open {
-        bottom: 0;
-        background: var(--primary-dark);
+    header.menu-open,
+    header.menu-open.scrolled {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     .nav-links {
-        position: absolute;
+        position: fixed;
         inset: 0;
         background: var(--primary-dark);
         flex-direction: column;
