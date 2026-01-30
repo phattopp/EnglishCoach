@@ -98,6 +98,7 @@ const translations = {
         label_message: "Message",
         contact_cta_text: "Send us a message and we'll get back to you as soon as possible.",
         cta_send: "Send Message",
+        cta_call: "Call Us",
 
         // Testimonials
         testimonials_title: "What Our Clients Say",
@@ -208,6 +209,7 @@ const translations = {
         label_message: "Nachricht",
         contact_cta_text: "Senden Sie uns eine Nachricht und wir melden uns so schnell wie möglich bei Ihnen.",
         cta_send: "Nachricht Senden",
+        cta_call: "Anrufen",
 
         // Testimonials
         testimonials_title: "Was unsere Kunden sagen",
@@ -254,9 +256,14 @@ const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li a");
 
+const header = document.querySelector('header');
+
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
+    const isOpen = navLinks.classList.contains("active");
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    header.classList.toggle("menu-open", isOpen);
 });
 
 // Close menu when clicking a link
@@ -264,6 +271,8 @@ links.forEach(link => {
     link.addEventListener("click", () => {
         hamburger.classList.remove("active");
         navLinks.classList.remove("active");
+        document.body.style.overflow = "";
+        header.classList.remove("menu-open");
     });
 });
 
@@ -287,12 +296,29 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Check initial state
 
+    // Active nav link based on scroll position
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links li a[href^="#"]');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navAnchors.forEach(a => {
+                    a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+                });
+            }
+        });
+    }, { rootMargin: '-40% 0px -60% 0px' });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
 
     // Hero Slider Logic
     const slides = document.querySelectorAll('.hero-slider .slide');
     if (slides.length > 0) {
         let currentSlide = 0;
-        const slideInterval = 2000; // Change every 2 seconds
+        const slideInterval = 6000; // Change every 6 seconds
 
         function nextSlide() {
             slides[currentSlide].classList.remove('active');
