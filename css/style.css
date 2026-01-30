@@ -1648,7 +1648,6 @@ footer > .container {
     height: 300px;
     background: url('../images/optimized/lying-on-sup.jpg') center center / cover no-repeat;
     background-attachment: fixed;
-    overflow: hidden;
 }
 
 .parallax-overlay {
@@ -1917,5 +1916,12 @@ footer > .container {
         top: auto;
         right: auto;
         margin-bottom: 1rem;
+    }
+}
+
+/* Disable fixed attachment on touch/mobile devices (iOS doesn't support it) */
+@media (hover: none), (pointer: coarse) {
+    .parallax-divider {
+        background-attachment: scroll;
     }
 }
