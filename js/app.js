@@ -12,6 +12,7 @@ const translations = {
         // Home / Hero
         hero_title: "Professional English Coaching and Summer Camps for Kids",
         hero_subtitle: "Improve your Business English or join one of our English Summer Camps.",
+        hero_cta_coaching: "Explore Coaching",
 
         // About Us
         about_title: "About Us",
@@ -125,6 +126,7 @@ const translations = {
         // Home / Hero
         hero_title: "Professionelles Englisch-Coaching und Sommercamps für Kinder",
         hero_subtitle: "Verbessern Sie Ihr Business-Englisch oder besuchen Sie eines unserer Englisch-Sommercamps.",
+        hero_cta_coaching: "Coaching entdecken",
 
         // About Us
         about_title: "Über Uns",
