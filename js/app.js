@@ -318,16 +318,36 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => sectionObserver.observe(section));
 
 
-    // Hero Slider Logic
+    // Hero Slider Logic with Ken Burns
     const slides = document.querySelectorAll('.hero-slider .slide');
     if (slides.length > 0) {
         let currentSlide = 0;
-        const slideInterval = 6000; // Change every 6 seconds
+        const slideInterval = 6000;
+
+        function applyKenBurns(index) {
+            const kbClass = index % 2 === 0 ? 'kb-odd' : 'kb-even';
+            slides[index].classList.remove('kb-odd', 'kb-even');
+            // Force reflow so animation restarts
+            void slides[index].offsetWidth;
+            slides[index].classList.add(kbClass);
+        }
+
+        // Start Ken Burns on first slide
+        applyKenBurns(0);
 
         function nextSlide() {
-            slides[currentSlide].classList.remove('active');
+            const prevSlide = currentSlide;
             currentSlide = (currentSlide + 1) % slides.length;
+
+            // Start Ken Burns on new slide and make it visible
+            applyKenBurns(currentSlide);
             slides[currentSlide].classList.add('active');
+
+            // Fade out old slide, then clean up its Ken Burns
+            slides[prevSlide].classList.remove('active');
+            setTimeout(() => {
+                slides[prevSlide].classList.remove('kb-odd', 'kb-even');
+            }, 1500); // matches opacity transition duration
         }
 
         setInterval(nextSlide, slideInterval);
@@ -384,6 +404,44 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollRevealElements.forEach(el => {
             el.classList.add('revealed');
         });
+    }
+
+    // Stats count-up animation
+    const statNumbers = document.querySelectorAll('.stat-number');
+    if (statNumbers.length > 0 && 'IntersectionObserver' in window) {
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const text = el.textContent.trim();
+                    const match = text.match(/^(\d+)(.*)$/);
+                    if (match) {
+                        const target = parseInt(match[1], 10);
+                        const suffix = match[2]; // e.g. "+", "%"
+                        const duration = 1500;
+                        const startTime = performance.now();
+
+                        function update(currentTime) {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            // Ease-out cubic
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.round(eased * target);
+                            el.textContent = current + suffix;
+                            if (progress < 1) {
+                                requestAnimationFrame(update);
+                            }
+                        }
+
+                        el.textContent = '0' + suffix;
+                        requestAnimationFrame(update);
+                    }
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNumbers.forEach(el => statsObserver.observe(el));
     }
 
     // Lightbox functionality
