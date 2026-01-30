@@ -1161,6 +1161,31 @@ nav {
     opacity: 1;
 }
 
+.team-slider-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 1;
+}
+
+.team-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition);
+}
+
+.team-dot.active {
+    background: white;
+}
+
 /* About Stats */
 .about-stats {
     display: flex;
@@ -1381,108 +1406,6 @@ nav {
     font-size: 1.1rem;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.field-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--text-primary);
-}
-
-.text-field {
-    width: 100%;
-    height: 52px;
-    padding: 0 20px;
-    border: 2px solid rgba(26, 58, 92, 0.15);
-    border-radius: var(--radius-md);
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--text-primary);
-    background: var(--cream);
-    transition: var(--transition);
-}
-
-.text-field:focus {
-    outline: none;
-    border-color: var(--primary);
-    background: white;
-    box-shadow: 0 0 0 4px rgba(26, 58, 92, 0.1);
-}
-
-.text-field.textarea {
-    height: 140px;
-    padding: 16px 20px;
-    resize: vertical;
-}
-
-.text-field::placeholder {
-    color: var(--text-muted);
-}
-
-.submit-button {
-    width: 100%;
-    height: 56px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    color: white;
-    border: none;
-    border-radius: var(--radius-md);
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: var(--transition);
-}
-
-.submit-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(26, 58, 92, 0.3);
-}
-
-.submit-button i {
-    transition: transform var(--transition);
-}
-
-.submit-button:hover i {
-    transform: translateX(3px);
-}
-
-/* Form Messages */
-.form-message {
-    text-align: center;
-    padding: 40px;
-}
-
-.form-message i {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-.form-message.success i {
-    color: var(--success);
-}
-
-.form-message.error i {
-    color: var(--error);
-}
-
-.form-message h3 {
-    color: var(--primary-dark);
-    margin-bottom: 0.5rem;
-}
-
-.form-message p {
-    color: var(--text-secondary);
-    margin-bottom: 0;
-}
-
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -1649,6 +1572,10 @@ footer {
     }
 
     .camp-features {
+        grid-template-columns: 1fr;
+    }
+
+    .camps-image-grid {
         grid-template-columns: 1fr;
     }
 

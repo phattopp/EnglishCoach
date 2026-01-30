@@ -32,6 +32,8 @@ const translations = {
         technical_coaching_title: "Technical English for Apprentices",
         technical_coaching_desc: "These programs are developed in close cooperation with our clients to meet specific technical and industry-related requirements. The focus is on practical Technical English for apprentices and young professionals in roles such as maintenance technicians, engineers, electricians, and production workers. The courses run alongside vocational school programs and provide a hands-on, job-focused approach to learning English that directly supports day-to-day work tasks.",
 
+        coaching_contact_text: "Interested in Business English coaching? Get in touch to discuss your needs.",
+
         private_tutoring_title: "Private One-on-One English Tutoring",
         private_tutoring_intro: "For students who want individual support, we offer private one-on-one English tutoring.",
         private_tutoring_desc1: "Each lesson is tailored to the student’s needs and learning style, helping to improve English grammar, learn more vocabulary or prepare for exams.",
@@ -142,6 +144,8 @@ const translations = {
 
         technical_coaching_title: "Technical English for Apprentices",
         technical_coaching_desc: "Diese Programme werden in enger Zusammenarbeit mit unseren Kunden entwickelt und auf konkrete technische und branchenspezifische Anforderungen ausgerichtet. Der Fokus liegt auf praxisorientiertem Technical English für Lehrlinge und junge Fachkräfte, etwa in den Bereichen Instandhaltung, Technik, Elektrotechnik oder Produktion. Die Kurse begleiten die Berufsschulausbildung und vermitteln technisches Englisch auf eine praxisnahe, arbeitsplatzbezogene Weise.",
+
+        coaching_contact_text: "Interesse an Business English Coaching? Kontaktieren Sie uns, um Ihre Anforderungen zu besprechen.",
 
         private_tutoring_title: "Private Einzel-Nachhilfe in Englisch",
         private_tutoring_intro: "Für Schüler, die individuelle Unterstützung benötigen, bieten wir private Einzel-Nachhilfe in Englisch an.",
@@ -331,15 +335,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Team Image Slider
     const teamSlides = document.querySelectorAll('.team-slide');
+    const teamDots = document.querySelectorAll('.team-dot');
     if (teamSlides.length > 1) {
         let currentTeamSlide = 0;
-        const teamSlideInterval = 4000; // Change every 4 seconds
+        const teamSlideInterval = 4000;
+
+        function showTeamSlide(index) {
+            teamSlides[currentTeamSlide].classList.remove('active');
+            teamDots[currentTeamSlide].classList.remove('active');
+            currentTeamSlide = index;
+            teamSlides[currentTeamSlide].classList.add('active');
+            teamDots[currentTeamSlide].classList.add('active');
+        }
 
         function nextTeamSlide() {
-            teamSlides[currentTeamSlide].classList.remove('active');
-            currentTeamSlide = (currentTeamSlide + 1) % teamSlides.length;
-            teamSlides[currentTeamSlide].classList.add('active');
+            showTeamSlide((currentTeamSlide + 1) % teamSlides.length);
         }
+
+        teamDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => showTeamSlide(i));
+        });
 
         setInterval(nextTeamSlide, teamSlideInterval);
     }
@@ -413,6 +428,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listeners
     galleryItems.forEach((img, index) => {
         img.addEventListener('click', () => openLightbox(index));
+        const galleryItem = img.closest('.gallery-item');
+        if (galleryItem) {
+            galleryItem.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox(index);
+                }
+            });
+        }
     });
 
     if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
