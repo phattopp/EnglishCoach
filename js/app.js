@@ -96,10 +96,8 @@ const translations = {
         label_name: "Name",
         label_email: "Email Address",
         label_message: "Message",
+        contact_cta_text: "Send us a message and we'll get back to you as soon as possible.",
         cta_send: "Send Message",
-        success_title: "Thank you!",
-        success_message: "Your message has been received.",
-        error_message: "Oops! Something went wrong. Please try again.",
 
         // Testimonials
         testimonials_title: "What Our Clients Say",
@@ -208,10 +206,8 @@ const translations = {
         label_name: "Name",
         label_email: "Email Adresse",
         label_message: "Nachricht",
+        contact_cta_text: "Senden Sie uns eine Nachricht und wir melden uns so schnell wie möglich bei Ihnen.",
         cta_send: "Nachricht Senden",
-        success_title: "Vielen Dank!",
-        success_message: "Ihre Nachricht wurde empfangen.",
-        error_message: "Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
 
         // Testimonials
         testimonials_title: "Was unsere Kunden sagen",
@@ -291,45 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Check initial state
 
-    // Form Handling
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerText;
-            submitBtn.disabled = true;
-            submitBtn.innerText = translations[document.documentElement.lang].id === 'de' ? 'Senden...' : 'Sending...';
-
-            try {
-                const response = await fetch('/api/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (!response.ok) {
-                    throw new Error('Form submission failed');
-                }
-
-                // Show success
-                form.style.display = 'none';
-                document.getElementById('form-success').style.display = 'block';
-                document.querySelector('.contact-heading').style.display = 'none';
-
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('form-error').style.display = 'block';
-                submitBtn.disabled = false;
-                submitBtn.innerText = originalText;
-            }
-        });
-    }
 
     // Hero Slider Logic
     const slides = document.querySelectorAll('.hero-slider .slide');

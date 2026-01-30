@@ -127,8 +127,8 @@
                 <p data-key="coaching_contact_text">
                     Interested in Business English coaching? Get in touch to discuss your needs.
                 </p>
-                <a href="#contact" class="btn btn-primary btn-sm">
-                    <i class="fa-solid fa-arrow-down"></i> Contact Us
+                <a href="mailto:mike@englishcoach.at?subject=Business%20English%20Coaching%20Inquiry" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-envelope"></i> Contact Us
                 </a>
             </div>
 
@@ -139,7 +139,7 @@
     <section id="camps" class="section-padding section-alt">
         <div class="container">
             <div class="camps-hero">
-                <img src="images/banner-inner6.jpg" alt="Summer Camps Banner" loading="lazy" class="camps-banner">
+                <img src="images/optimized/english-camp-banner.jpg" alt="Summer Camps Banner" loading="lazy" class="camps-banner">
                 <div class="camps-hero-content">
                     <span class="section-tag light"><i class="fa-solid fa-sun"></i> Summer 2026</span>
                     <h2 data-key="camps_title">Sommercamps</h2>
@@ -339,8 +339,8 @@
                     <p data-key="private_tutoring_intro"></p>
                     <p data-key="private_tutoring_desc1"></p>
                     <p data-key="private_tutoring_desc2"></p>
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fa-solid fa-calendar-check"></i> <span data-key="book_lesson_btn">Book a Lesson</span>
+                    <a href="mailto:mike@englishcoach.at?subject=Private%20Tutoring%20%2F%20Lesson%20Booking" class="btn btn-primary">
+                        <i class="fa-solid fa-envelope"></i> <span data-key="book_lesson_btn">Book a Lesson</span>
                     </a>
                     <img src="images/optimized/face-to-face.jpg" alt="Face to Face" loading="lazy">
                 </div>
@@ -475,34 +475,10 @@
                 </div>
 
                 <div class="contact-form-panel">
-                    <form id="contact-form" action="/api/submit" method="POST">
-                        <div class="form-group">
-                            <label for="name" class="field-label" data-key="label_name">Name</label>
-                            <input type="text" class="text-field" id="name" name="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="field-label" data-key="label_email">Email Address</label>
-                            <input type="email" class="text-field" id="email" name="email"
-                                placeholder="john@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="field-label" data-key="label_message">Message</label>
-                            <textarea class="text-field textarea" id="message" name="message"
-                                placeholder="How can we help you?" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">
-                            <i class="fa-solid fa-paper-plane"></i> <span data-key="cta_send">Send Message</span>
-                        </button>
-                    </form>
-                    <div id="form-success" style="display:none;" class="form-message success">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <h3 data-key="success_title">Thank you!</h3>
-                        <p data-key="success_message">Your message has been received.</p>
-                    </div>
-                    <div id="form-error" style="display:none;" class="form-message error">
-                        <i class="fa-solid fa-circle-xmark"></i>
-                        <p data-key="error_message">Oops! Something went wrong. Please try again.</p>
-                    </div>
+                    <p class="contact-cta-text" data-key="contact_cta_text">Send us a message and we'll get back to you as soon as possible.</p>
+                    <a href="mailto:mike@englishcoach.at?subject=Website%20Inquiry" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-envelope"></i> <span data-key="cta_send">Send Message</span>
+                    </a>
                 </div>
             </div>
         </div>
