@@ -1541,6 +1541,11 @@ footer {
         display: none;
     }
 
+    .camps-banner {
+        min-height: 280px;
+        object-fit: cover;
+    }
+
     .camps-hero-content {
         padding: 24px;
     }
