@@ -681,8 +681,10 @@ nav {
 }
 
 .camps-banner {
+    display: block;
     width: 100%;
     height: auto;
+    object-fit: contain;
     border-radius: var(--radius-xl);
 }
 
