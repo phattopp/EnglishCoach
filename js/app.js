@@ -111,7 +111,11 @@ const translations = {
         testimonial2_author: "Sarah L., Parent",
         testimonial3_text: "The intensive English week was a highlight for our students. Professional, engaging, and very effective.",
         testimonial3_author: "Mag. Elisabeth K., Teacher",
-        add_testimonial_btn: "Add a Testimonial"
+        add_testimonial_btn: "Add a Testimonial",
+
+        // Layout break elements
+        parallax_tagline: "Adventure, friendship, and English — all in one summer.",
+        accent_band_text: "Real English. Real Confidence. Real Results."
     },
 
 
@@ -225,7 +229,11 @@ const translations = {
         testimonial2_author: "Sarah L., Mutter",
         testimonial3_text: "Die Intensiv-Englischwoche war ein Highlight für unsere Schüler. Professionell, motivierend und sehr effektiv.",
         testimonial3_author: "Mag. Elisabeth K., Lehrerin",
-        add_testimonial_btn: "Testimonial hinzufügen"
+        add_testimonial_btn: "Testimonial hinzufügen",
+
+        // Layout break elements
+        parallax_tagline: "Abenteuer, Freundschaft und Englisch — alles in einem Sommer.",
+        accent_band_text: "Echtes Englisch. Echtes Selbstvertrauen. Echte Ergebnisse."
     }
 
 };

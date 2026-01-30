@@ -181,8 +181,11 @@ img {
     z-index: 1;
 }
 
-/* Remove divider from dark section and the section right before it */
-.section-dark::after {
+/* Remove divider from dark section and sections before layout breaks */
+.section-dark::after,
+#coaching::after,
+#schools::after,
+#about::after {
     display: none;
 }
 
@@ -1268,13 +1271,20 @@ nav {
     background: white;
 }
 
-/* About Stats */
+/* About Stats - overlaps into contact section */
 .about-stats {
     display: flex;
+    justify-content: center;
     gap: 40px;
     margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(26, 58, 92, 0.1);
+    margin-bottom: -60px;
+    padding: 2rem 2.5rem;
+    background: var(--paper);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(26, 58, 92, 0.08);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 2;
 }
 
 .stat {
@@ -1629,6 +1639,87 @@ footer > .container {
 }
 
 /* ==========================================================================
+   Layout Breaks - Parallax Divider, Stats Overlap, Accent Band
+   ========================================================================== */
+
+/* Parallax Divider between Coaching and Camps */
+.parallax-divider {
+    position: relative;
+    height: 300px;
+    background: url('../images/optimized/lying-on-sup.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.parallax-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 39, 68, 0.7) 0%,
+        rgba(26, 58, 92, 0.5) 50%,
+        rgba(201, 162, 39, 0.25) 100%
+    );
+}
+
+.parallax-tagline {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0 24px;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-style: italic;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Accent Band between Schools and Testimonials */
+.accent-band {
+    background: var(--primary-dark);
+    padding: 48px 24px;
+    text-align: center;
+    position: relative;
+}
+
+.accent-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(
+        rgba(255, 255, 255, 0.06) 0% 25%,
+        transparent 0% 50%
+    ) 0 0 / 3px 3px;
+    pointer-events: none;
+}
+
+.accent-band-text {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent-light);
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+}
+
+/* Ensure contact section accommodates the stats overlap */
+#contact.section-dark {
+    padding-top: calc(var(--section-spacing) + 40px);
+}
+
+/* ==========================================================================
    Responsive Design
    ========================================================================== */
 
@@ -1653,6 +1744,14 @@ footer > .container {
 
     .contact-info-panel {
         padding-right: 0;
+    }
+
+    .about-stats {
+        margin-bottom: -40px;
+    }
+
+    #contact.section-dark {
+        padding-top: calc(var(--section-spacing) + 24px);
     }
 }
 
@@ -1769,6 +1868,21 @@ footer > .container {
     .about-stats {
         flex-wrap: wrap;
         gap: 24px;
+        margin-bottom: -30px;
+        padding: 1.5rem 1.5rem;
+    }
+
+    .parallax-divider {
+        height: 200px;
+        background-attachment: scroll;
+    }
+
+    .accent-band {
+        padding: 36px 20px;
+    }
+
+    #contact.section-dark {
+        padding-top: calc(var(--section-spacing) + 16px);
     }
 
     .stat {
