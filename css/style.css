@@ -803,7 +803,31 @@ nav {
 }
 
 .mission-content p {
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
+}
+
+.camp-insta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    background: var(--accent-muted);
+    border-radius: 100px;
+    transition: var(--transition);
+}
+
+.camp-insta-link:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 162, 39, 0.2);
+}
+
+.camp-insta-link i {
+    font-size: 1.1em;
 }
 
 /* Camp Cards */
@@ -1630,6 +1654,14 @@ footer > .container {
 
 .footer-links a i {
     font-size: 0.9em;
+}
+
+.footer-insta {
+    color: var(--accent-light) !important;
+}
+
+.footer-insta:hover {
+    color: white !important;
 }
 
 .footer-bottom p {
