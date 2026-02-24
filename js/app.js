@@ -299,20 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('lang') || 'de';
     setLanguage(savedLang);
 
-    // Header scroll effect
+    // Header scroll effect is now handled purely via CSS for a persistent feel
     const header = document.querySelector('header');
-    const scrollThreshold = 50;
-
-    function handleScroll() {
-        if (window.scrollY > scrollThreshold) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Check initial state
+    header.classList.add('scrolled'); // Force class for potential logic dependencies
 
     // Active nav link based on current page
     const navAnchors = document.querySelectorAll('.nav-links li a');
