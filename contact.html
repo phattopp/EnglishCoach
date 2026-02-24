@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The English Coach</title>
+    <meta name="description"
+        content="Get in touch with The English Coach for any questions about our coaching or camps.">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="The English Coach"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-key="nav_home">Home</a></li>
+                    <li><a href="coaching.html" data-key="nav_coaching">Coaching</a></li>
+                    <li><a href="camps.html" data-key="nav_camps">Camps</a></li>
+                    <li><a href="schools.html" data-key="nav_schools">Schulen</a></li>
+                    <li><a href="about.html" data-key="nav_about">Über uns</a></li>
+                    <li><a href="contact.html" data-key="nav_contact">Kontakt</a></li>
+                    <li class="lang-switch">
+                        <button class="lang-btn active" onclick="setLanguage('de')">DE</button>
+                        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div style="padding-top: 100px;"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding section-dark">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-panel scroll-reveal">
+                    <span class="section-tag light"><i class="fa-solid fa-envelope"></i> Get in Touch</span>
+                    <h2 class="contact-heading" data-key="contact_title">Questions? We're here to help.</h2>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-user"></i>
+                            <div>
+                                <strong>Michael Topp</strong>
+                                <span>CEO & Lead Adventure Guide</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span>Fischlstrasse 16</span>
+                                <span>A-9020 Klagenfurt</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+436766414143">+43 676 641 41 43</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:mike@englishcoach.at">mike@englishcoach.at</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-instagram"></i>
+                            <a href="https://www.instagram.com/englishadventurecamp/"
+                                target="_blank">@englishadventurecamp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel scroll-reveal">
+                    <p class="contact-cta-text" data-key="contact_cta_text">Send us a message and we'll get back to you
+                        as soon as possible.</p>
+                    <div class="contact-cta-buttons">
+                        <a href="mailto:mike@englishcoach.at?subject=Website%20Inquiry" class="btn btn-primary btn-lg">
+                            <i class="fa-solid fa-envelope"></i> <span data-key="cta_send">Send Message</span>
+                        </a>
+                        <a href="tel:+436766414143" class="btn btn-secondary btn-lg">
+                            <i class="fa-solid fa-phone"></i> <span data-key="cta_call">Call Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="The English Coach" class="footer-logo">
+                    <p>Professional English Coaching & Summer Camps in Austria</p>
+                </div>
+                <div class="footer-links">
+                    <a href="coaching.html"><i class="fa-solid fa-briefcase"></i> Coaching</a>
+                    <a href="camps.html"><i class="fa-solid fa-campground"></i> Camps</a>
+                    <a href="schools.html"><i class="fa-solid fa-school"></i> Schools</a>
+                    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                    <a href="https://www.instagram.com/englishadventurecamp/" target="_blank" class="footer-insta"><i
+                            class="fa-brands fa-instagram"></i> Instagram</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 The English Coach. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Camps - The English Coach</title>
+    <meta name="description"
+        content="English Summer Camps for Kids in Austria. Adventures, friendships and English learning.">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="The English Coach"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-key="nav_home">Home</a></li>
+                    <li><a href="coaching.html" data-key="nav_coaching">Coaching</a></li>
+                    <li><a href="camps.html" data-key="nav_camps">Camps</a></li>
+                    <li><a href="schools.html" data-key="nav_schools">Schulen</a></li>
+                    <li><a href="about.html" data-key="nav_about">Über uns</a></li>
+                    <li><a href="contact.html" data-key="nav_contact">Kontakt</a></li>
+                    <li class="lang-switch">
+                        <button class="lang-btn active" onclick="setLanguage('de')">DE</button>
+                        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div style="padding-top: 100px;"></div>
+
+    <!-- Camps Section -->
+    <section id="camps" class="section-padding section-alt">
+        <div class="container">
+            <div class="camps-hero scroll-reveal">
+                <img src="images/optimized/english-camp-banner.jpg" alt="Summer Camps Banner" loading="lazy"
+                    class="camps-banner">
+                <div class="camps-hero-content">
+                    <span class="section-tag light"><i class="fa-solid fa-sun"></i> Summer 2026</span>
+                    <h2 data-key="camps_title">Sommercamps</h2>
+                </div>
+            </div>
+
+            <!-- Mission -->
+            <div class="mission-block scroll-reveal">
+                <div class="mission-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="mission-content">
+                    <h3 data-key="camps_mission_title">Unsere Mission</h3>
+                    <p data-key="camps_mission_desc"></p>
+                    <a href="https://www.instagram.com/englishadventurecamp/" target="_blank" class="camp-insta-link">
+                        <i class="fa-brands fa-instagram"></i> Follow our Adventures
+                    </a>
+                </div>
+            </div>
+
+            <!-- Intro Feature -->
+            <div class="about-grid feature-grid scroll-reveal">
+                <div class="about-img camps-image-grid">
+                    <img src="images/optimized/group-pic.jpg" alt="Group Activities" loading="lazy">
+                    <img src="images/optimized/lesson-time.jpg" alt="English Lessons" loading="lazy">
+                    <img src="images/optimized/raft-with-girls.jpg" alt="Rafting Adventure" loading="lazy">
+                </div>
+
+                <div class="about-text">
+                    <h3 data-key="camps_adventure_intro_title">Neue Abenteuer erleben</h3>
+                    <p data-key="camps_adventure_intro_p1">At our camps, children are encouraged to step out of their
+                        comfort zones, try new activities, and
+                        build confidence while discovering their own strengths.</p>
+                    <p data-key="camps_adventure_intro_p2">We offer day camps which take place down at a lake with the
+                        main activity being SUP tours around
+                        the lake every day.</p>
+                    <p data-key="camps_adventure_intro_p3">English learning is woven into every part of the camp
+                        experience.</p>
+                </div>
+            </div>
+
+            <div class="services-grid grid-2">
+                <div class="service-card camp-card scroll-reveal">
+                    <div class="camp-badge">
+                        <i class="fa-solid fa-mountain"></i> Adventure
+                    </div>
+                    <h3 data-key="adv_camp_title">Adventure Camp</h3>
+                    <p data-key="adv_camp_desc1"></p>
+                    <p data-key="adv_camp_desc2"></p>
+                    <p data-key="adv_camp_desc3"></p>
+
+                    <div class="camp-features">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-water"></i>
+                            <span>Rafting</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>Hiking</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-campground"></i>
+                            <span>Log Cabins</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Full Board</span>
+                        </div>
+                    </div>
+
+                    <div class="camp-pricing">
+                        <div class="price-header">
+                            <i class="fa-regular fa-calendar"></i>
+                            <h4 data-key="camp_dates_title">Dates & Prices</h4>
+                        </div>
+                        <ul>
+                            <li><strong data-key="adv_camp_dates"></strong></li>
+                            <li class="price"><span>€650</span> per child</li>
+                        </ul>
+                        <a href="https://form.jotform.com/260211461742346" class="btn btn-primary" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> <span data-key="sign_up_btn">Sign Up Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card camp-card scroll-reveal">
+                    <div class="camp-badge lake">
+                        <i class="fa-solid fa-sailboat"></i> Lake Days
+                    </div>
+                    <h3 data-key="lake_camp_title">Lake Days at Keutschachersee</h3>
+                    <p data-key="lake_camp_intro"></p>
+                    <h4 data-key="activities_title">Aktivitäten</h4>
+                    <p data-key="activities_desc"></p>
+
+                    <div class="camp-features">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-person-swimming"></i>
+                            <span>SUP Tours</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                            <span>Games</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Max 15 Kids</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-life-ring"></i>
+                            <span>Safety First</span>
+                        </div>
+                    </div>
+
+                    <div class="camp-pricing">
+                        <div class="price-header">
+                            <i class="fa-regular fa-calendar"></i>
+                            <h4 data-key="camp_dates_title">Dates & Prices</h4>
+                        </div>
+                        <ul>
+                            <li><strong data-key="lake_camp_week1"></strong></li>
+                            <li><strong data-key="lake_camp_week2"></strong></li>
+                            <li><strong data-key="lake_camp_week3"></strong></li>
+                            <li class="price"><span>€360</span> per child</li>
+                        </ul>
+                        <a href="https://form.jotform.com/260263089320351" class="btn btn-primary" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> <span data-key="sign_up_btn">Sign Up Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camp Gallery -->
+            <div class="camp-gallery">
+                <div class="gallery-item scroll-reveal" role="button" tabindex="0"
+                    aria-label="View hiking adventure photo">
+                    <img src="images/optimized/group-pic-hike.jpg" alt="Hiking adventure" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal" role="button" tabindex="0"
+                    aria-label="View group activities photo">
+                    <img src="images/optimized/group-pic-uk.jpg" alt="Group activities" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal" role="button" tabindex="0"
+                    aria-label="View SUP on the lake photo">
+                    <img src="images/optimized/lying-on-sup.jpg" alt="SUP on the lake" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal" role="button" tabindex="0"
+                    aria-label="View kids on paddleboards photo">
+                    <img src="images/optimized/boys-on-sup.jpg" alt="Kids on paddleboards" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal" role="button" tabindex="0" aria-label="View rafting fun photo">
+                    <img src="images/optimized/raft-with-girls.jpg" alt="Rafting fun" loading="lazy">
+                </div>
+                <div class="gallery-item scroll-reveal" role="button" tabindex="0"
+                    aria-label="View water activities photo">
+                    <img src="images/optimized/water-in-face.jpg" alt="Water activities" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Camp Team Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text scroll-reveal">
+                    <span class="section-tag"><i class="fa-solid fa-users"></i> Our Team</span>
+                    <h3 data-key="team_title">Unser Kids Camp Team</h3>
+                    <p data-key="team_desc1"></p>
+                </div>
+                <div class="about-img team-slider scroll-reveal">
+                    <img src="images/optimized/lake-days-team.jpg" alt="Lake Days Team" class="team-slide active"
+                        loading="lazy">
+                    <img src="images/optimized/ronja.jpg" alt="Ronja - Team Member" class="team-slide" loading="lazy">
+                    <div class="team-slider-dots">
+                        <button class="team-dot active" aria-label="Show image 1"></button>
+                        <button class="team-dot" aria-label="Show image 2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="The English Coach" class="footer-logo">
+                    <p>Professional English Coaching & Summer Camps in Austria</p>
+                </div>
+                <div class="footer-links">
+                    <a href="coaching.html"><i class="fa-solid fa-briefcase"></i> Coaching</a>
+                    <a href="camps.html"><i class="fa-solid fa-campground"></i> Camps</a>
+                    <a href="schools.html"><i class="fa-solid fa-school"></i> Schools</a>
+                    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                    <a href="https://www.instagram.com/englishadventurecamp/" target="_blank" class="footer-insta"><i
+                            class="fa-brands fa-instagram"></i> Instagram</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 The English Coach. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

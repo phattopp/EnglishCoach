@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching - The English Coach</title>
+    <meta name="description" content="Professional English Coaching for Business and Technical specialists.">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="The English Coach"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-key="nav_home">Home</a></li>
+                    <li><a href="coaching.html" data-key="nav_coaching">Coaching</a></li>
+                    <li><a href="camps.html" data-key="nav_camps">Camps</a></li>
+                    <li><a href="schools.html" data-key="nav_schools">Schulen</a></li>
+                    <li><a href="about.html" data-key="nav_about">Über uns</a></li>
+                    <li><a href="contact.html" data-key="nav_contact">Kontakt</a></li>
+                    <li class="lang-switch">
+                        <button class="lang-btn active" onclick="setLanguage('de')">DE</button>
+                        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div style="padding-top: 100px;"></div>
+
+    <!-- Coaching Section -->
+    <section id="coaching" class="section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Professional Development</span>
+                <h2 data-key="coaching_title">Business & Technical English</h2>
+                <p class="section-intro" data-key="coaching_intro">Unsere
+                    Business- und Technical-English-Programme...</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Basic English -->
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 data-key="basic_coaching_title">Basic English Coaching</h3>
+                    <p data-key="basic_coaching_desc">Ideal für Mitarbeitende mit grundlegenden Englischkenntnissen...
+                    </p>
+                    <img src="images/To%20Use/basic%20business.jpg" alt="Basic Business English" loading="lazy">
+                </div>
+                <!-- Business English -->
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 data-key="business_coaching_title">Business English Coaching</h3>
+                    <p data-key="business_coaching_desc">Für Fachkräfte mit guten Englischkenntnissen...</p>
+                    <img src="images/optimized/mike-ai-copy.jpg" alt="Business English Coaching" loading="lazy">
+                </div>
+                <!-- Technical English -->
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 data-key="technical_coaching_title">Technical English</h3>
+                    <p data-key="technical_coaching_desc">Entwickelt in enger Zusammenarbeit mit unseren Kunden...</p>
+                    <img src="images/optimized/apprentice-lab.jpg" alt="Apprentice Lab" loading="lazy">
+                </div>
+            </div>
+
+            <div class="cta-box-mini scroll-reveal">
+                <p data-key="coaching_contact_text">
+                    Interested in Business English coaching? Get in touch to discuss your needs.
+                </p>
+                <a href="mailto:mike@englishcoach.at?subject=Business%20English%20Coaching%20Inquiry"
+                    class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-envelope"></i> Contact Us
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="The English Coach" class="footer-logo">
+                    <p>Professional English Coaching & Summer Camps in Austria</p>
+                </div>
+                <div class="footer-links">
+                    <a href="coaching.html"><i class="fa-solid fa-briefcase"></i> Coaching</a>
+                    <a href="camps.html"><i class="fa-solid fa-campground"></i> Camps</a>
+                    <a href="schools.html"><i class="fa-solid fa-school"></i> Schools</a>
+                    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                    <a href="https://www.instagram.com/englishadventurecamp/" target="_blank" class="footer-insta"><i
+                            class="fa-brands fa-instagram"></i> Instagram</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 The English Coach. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

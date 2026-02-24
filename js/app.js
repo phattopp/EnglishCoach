@@ -310,22 +310,18 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Check initial state
 
-    // Active nav link based on scroll position
-    const sections = document.querySelectorAll('section[id]');
-    const navAnchors = document.querySelectorAll('.nav-links li a[href^="#"]');
+    // Active nav link based on current page
+    const navAnchors = document.querySelectorAll('.nav-links li a');
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
-    const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                navAnchors.forEach(a => {
-                    a.classList.toggle('active', a.getAttribute('href') === '#' + id);
-                });
-            }
-        });
-    }, { rootMargin: '-40% 0px -60% 0px' });
-
-    sections.forEach(section => sectionObserver.observe(section));
+    navAnchors.forEach(a => {
+        const href = a.getAttribute('href');
+        if (href === currentPath) {
+            a.classList.add('active');
+        } else {
+            a.classList.remove('active');
+        }
+    });
 
 
     // Hero Slider Logic with Ken Burns
