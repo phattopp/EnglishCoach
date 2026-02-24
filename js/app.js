@@ -86,6 +86,8 @@ const translations = {
         lake_camp_week3: "Week 3: August 10 - 14",
         sign_up_btn: "Sign Up Now",
         book_lesson_btn: "Book a Lesson",
+        registration_title: "Lake Days Registration",
+        registration_intro: "Register your child for the Lake Days at Keutschachersee.",
 
         phone_title: "Phone-Free Fun",
         phone_desc: "We encourage children to leave their phones at home to fully enjoy the camp experience. Phones can be brought if necessary, but use will be limited and children may be asked to put them away if they are using them too much.",
@@ -204,6 +206,8 @@ const translations = {
         lake_camp_week3: "Woche 3: 10. - 14. August",
         sign_up_btn: "Jetzt Anmelden",
         book_lesson_btn: "Stunde buchen",
+        registration_title: "Lake Days Anmeldung",
+        registration_intro: "Melden Sie Ihr Kind für die Lake Days am Keutschachersee an.",
 
         phone_title: "Telefonfreie Woche",
         phone_desc: "Wir empfehlen, dass Kinder ihre Handys zu Hause lassen, um das Camp voll zu genießen. Handys dürfen mitgebracht werden, die Nutzung wird jedoch begrenzt und bei zu häufiger Nutzung aufgefordert, diese wegzulegen.",
