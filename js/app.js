@@ -307,18 +307,68 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     header.classList.add('scrolled'); // Force class for potential logic dependencies
 
-    // Active nav link based on current page
+    // Robust active nav link detection
     const navAnchors = document.querySelectorAll('.nav-links li a');
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const path = decodeURIComponent(window.location.pathname).toLowerCase();
+    const currentFile = path.split('/').pop() || 'index.html';
 
     navAnchors.forEach(a => {
         const href = a.getAttribute('href');
-        if (href === currentPath) {
-            a.classList.add('active');
-        } else {
-            a.classList.remove('active');
-        }
+        if (!href) return;
+
+        const cleanHref = href.toLowerCase().replace('./', '');
+
+        // Comprehensive matching:
+        // 1. Exact filename match
+        // 2. We are at root (/) and link is index.html
+        // 3. Path ends with the clean href
+        const isActive = (cleanHref === currentFile) ||
+            (currentFile === 'index.html' && cleanHref === 'index.html') ||
+            (path.endsWith(cleanHref) && cleanHref !== '');
+
+        a.classList.toggle('active', isActive);
     });
+
+
+    // Lazy Load Jotforms
+    const lazyForms = document.querySelectorAll('.lazy-form');
+    if (lazyForms.length > 0 && 'IntersectionObserver' in window) {
+        const formObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const container = entry.target;
+                    const formUrl = container.getAttribute('data-form-url');
+
+                    // Create the Jotform script
+                    const script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = formUrl;
+                    script.async = true;
+
+                    // Handle script load to remove loader
+                    script.onload = () => {
+                        const loader = container.querySelector('.form-loader');
+                        if (loader) loader.style.display = 'none';
+                        container.style.minHeight = 'auto';
+                    };
+
+                    // Re-clean container and append script
+                    container.innerHTML = '';
+                    container.appendChild(script);
+
+                    observer.unobserve(container);
+                }
+            });
+        }, { rootMargin: '200px' }); // Load slightly before they enter viewport
+
+        lazyForms.forEach(form => formObserver.observe(form));
+    } else if (lazyForms.length > 0) {
+        // Fallback for browsers without IntersectionObserver
+        lazyForms.forEach(container => {
+            const formUrl = container.getAttribute('data-form-url');
+            container.innerHTML = `<script type="text/javascript" src="${formUrl}"></script>`;
+        });
+    }
 
 
     // Hero Slider Logic with Ken Burns
