@@ -1324,9 +1324,12 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 20%;
+    /* Focus slightly higher for faces */
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: scale(1.2);
+    /* 20% zoom to focus on people */
 }
 
 .team-slide.active {
